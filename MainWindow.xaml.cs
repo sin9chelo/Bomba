@@ -47,6 +47,11 @@ namespace Main
             ActiveFrame.Content = new StorePage();
         }
 
+        private void Profile_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveFrame.Content = new ProfilePage();
+        }
+
         //private void AddNewUser_Click(object sender, RoutedEventArgs e)
         //{
         //    using (var context = new UserContext())

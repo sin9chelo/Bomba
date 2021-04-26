@@ -1,26 +1,78 @@
 ﻿<Page x:Class="Main.Pages.ProfilePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Main.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="498.4" d:DesignWidth="1000"
+      d:DesignHeight="500" d:DesignWidth="1000"
       Title="ProfilePage">
-
-    <Grid Background="#171817">
+    <Page.Resources>
+        <ResourceDictionary Source="/ResourceDictionary/ProfileDictionary.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1">
+        <Rectangle Grid.Column="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#003248" Offset="0"/>
+                    <GradientStop Color="#001933" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="2*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Border Name="BorderLine" Style="{StaticResource BorderStl}">
+                    <TextBlock Text="Setting" Style="{StaticResource TextStl}">
+                        
+                    </TextBlock>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <Image x:Name="UserSet"  Width="30" Height="30" Source="{svgc:SvgImage Source=/image/UserSetting.svg}">
+
+                    </Image>
+                    <Button Content="Personal Settings" Style="{StaticResource PersonalBtn}" Click="PersonalSetting_Click"></Button>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Image x:Name="LockSet"  Width="30" Height="30" Source="{svgc:SvgImage Source=/image/lock.svg}">
+
+                    </Image>
+                    <Button Content="Security/entrance" Style="{StaticResource PersonalBtn}"></Button>
+                </StackPanel>
+                <Grid Grid.Column="1">
+                    
+                </Grid>
+            </Grid>
         </Grid>
+        <Rectangle Grid.Column="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#003248" Offset="0"/>
+                    <GradientStop Color="#001933" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Column="1" CanContentScroll="True" Name="ScrollProf">
+            <Frame Name="SettingsFrame" Grid.Column="1" NavigationUIVisibility="Hidden" Source="PersonalSettingsPage.xaml">
+                
+            </Frame>
+        </ScrollViewer>
     </Grid>
 </Page>
