@@ -76,8 +76,13 @@
                     </Button>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <Button x:Name="LibraryBtn" Content="LIBRARY" Style="{StaticResource ActiveBtn}">
+                    <Button Name="LibraryBtn" Content="LIBRARY" Style="{StaticResource ActiveBtn}">
 
+                    </Button>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button Name="ProfileBtn" Content="PROFILE" Style="{StaticResource ActiveBtn}">
+                        
                     </Button>
                 </Grid>
             </Grid>
