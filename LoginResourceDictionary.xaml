@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Main">
+    <!--Main Loading page-->
+    
+    <Style TargetType="TextBlock" x:Key="NameApp">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    
+    <Style TargetType="Button" x:Key="SignUp_In">
+        <Setter Property="Background" Value="#00FFFFFF"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--SignUP Page-->
+
+    <Style TargetType="Border" x:Key="BorderStyle">
+        <Setter Property="CornerRadius" Value="30"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Height" Value="50"/>
+    </Style>
+
+    <Style  TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}" x:Key="SignBox" >
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                 x:Name="textSource" 
+                                 Background="Transparent" 
+                                 Panel.ZIndex="2"
+                                 BorderThickness="0"/>
+                        <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1" BorderThickness="0">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}">
+                                    <Setter Property="Foreground" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                            <Setter Property="Foreground" Value="LightGray"/>
+                                            <Setter Property="BorderThickness" Value="0"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Border" x:Key="BorderBtn">
+        <Setter Property="CornerRadius" Value="30"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#a9ac8e"/>
+        <Setter Property="BorderBrush" Value="#a9ac8e"/>
+        <Setter Property="Height" Value="50"/>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="#e5e8c8"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Button" x:Key="BtnSign">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    
+    
+</ResourceDictionary>

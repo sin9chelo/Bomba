@@ -1,0 +1,92 @@
+﻿<Window Name="Main"
+        x:Class="Main.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        mc:Ignorable="d"
+        MouseLeftButtonDown="MoveGrid_MouseLeftButtonDown"
+        Title="MainWindow" Height="600" Width="1000" Margin="0"  WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True">
+    <Window.Resources>
+        <ResourceDictionary Source="MainResourceDictionary.xaml"/>
+    </Window.Resources>
+    <Grid>
+        <Grid x:Name="Container">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.045*"></RowDefinition>
+                <RowDefinition Height="0.06*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="0.1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#1D1824" x:Name="MoveGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--<Button Grid.Column="0" Click="AddNewUser_Click" Background="#1D1824" Content="Connect" Foreground="White">
+                    
+                </Button>-->
+                <Button Grid.Column="10" Style="{StaticResource ExitBtn}" Panel.ZIndex="1000" BorderThickness="0" VerticalContentAlignment="Bottom" Click="Close_Window">
+                  
+                </Button>
+                <Button Grid.Column="9" Style="{StaticResource SizeBtn}" Panel.ZIndex="1000" BorderThickness="0" VerticalContentAlignment="Bottom" Click="MinMax_Window">
+                    
+                </Button>
+                <Button Grid.Column="8" Panel.ZIndex="1000" BorderThickness="0" VerticalContentAlignment="Bottom" Click="Button_MouseDown" Margin="0.2,10,0.2,0.4" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Bd" Background="Transparent">
+                                <Path VerticalAlignment="Bottom" x:Name="Pt" Height="19.3" Width="Auto" Stretch="Uniform" Data="M86,32.5H2c-1.104,0-2,0.896-2,2v19c0,1.104,0.896,2,2,2h84c1.104,0,2-0.896,2-2v-19C88,33.396,87.104,32.5,86,32.5z"
+                                      Stroke="#FF5F5C5C" StrokeThickness="1" Fill="Black" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Pt" Property="Stroke" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Grid.Column="7" Content="Profile" Style="{StaticResource ProfileStyle}">
+                    
+                </Button>
+            </Grid>
+            <Grid Grid.Row="1" Background="#1D1824">
+                <!--<TextBlock Name="Out" Foreground="White"></TextBlock>-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button Name="StoreBtn" Content="STORE" Style="{StaticResource ActiveBtn}" Click="StoreAct_Click">
+
+                    </Button>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button x:Name="LibraryBtn" Content="LIBRARY" Style="{StaticResource ActiveBtn}">
+
+                    </Button>
+                </Grid>
+            </Grid>
+            <Frame Grid.Row="2" Name="ActiveFrame" NavigationUIVisibility="Hidden" Background="#171817">
+                
+            </Frame>
+            <Grid Grid.Row="3" Background="#1D1824">
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

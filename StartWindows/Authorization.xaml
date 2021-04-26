@@ -1,0 +1,46 @@
+﻿<Window x:Class="Main.StartWindows.Authorization"
+        x:Name="Authoriz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main.StartWindows"
+        mc:Ignorable="d"
+        Title="Authorization" Height="560" Width="570" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="Authoriz_MouseLeftButtonDown">
+    <Window.Resources>
+        <ResourceDictionary Source="/LoginResourceDictionary.xaml"/>
+    </Window.Resources>
+    <Grid Background="#1c1f1f">
+        <Grid Height="450" Width="340">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.28*"></RowDefinition>
+                <RowDefinition Height="0.28*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Text="GameNet" Style="{StaticResource NameApp}"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackPanel VerticalAlignment="Center">
+                        <Button Name="SignUp" Content="SIGN UP" Style="{StaticResource SignUp_In}" Click="SignUp_Click"></Button>
+                        <TextBlock Name="UpLine" Width="90" Height="3" Background="#e5e8c8"></TextBlock>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel VerticalAlignment="Center">
+                        <Button Name="SignIn" Content="SIGN IN" Style="{StaticResource SignUp_In}" Click="SignIn_Click"></Button>
+                        <TextBlock Name="InLine" Width="90" Height="3" Background="Transparent"></TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Frame Name="LoginAuthorPage" Grid.Row="2" NavigationUIVisibility="Hidden" Source="/Pages/SignUpPage.xaml">
+                
+            </Frame>
+        </Grid>
+    </Grid>
+</Window>
