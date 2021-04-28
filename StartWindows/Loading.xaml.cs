@@ -23,21 +23,15 @@ namespace Main.StartWindows
         public Loading()
         {
             InitializeComponent();
-            Media.Source = new Uri(@"D:\2 курс\2 сем\bb(big bomb)\Main\gif\loading.gif");
             LoadingWindow();
         }
         DispatcherTimer timer = new DispatcherTimer();
-        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
-        {
-            Media.Position = new TimeSpan(0, 0, 1);
-            Media.Play();
-        }
         private void Timer_Tick(object sender, EventArgs e)
         {
             timer.Stop();
             Hide();
-            MainWindow page = new MainWindow();
-            page.ShowDialog();
+            MainWindow mainwindow = new MainWindow();
+            mainwindow.ShowDialog();
             Close();
         }
         void LoadingWindow()

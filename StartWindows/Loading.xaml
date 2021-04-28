@@ -4,10 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main.StartWindows"
+        xmlns:wpfanimated="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
-        Title="Loading" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" MouseLeftButtonDown="MoveGrid_MouseLeftButtonDown">
+        Title="Loading" Height="450" Width="800" Background="Transparent" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" MouseLeftButtonDown="MoveGrid_MouseLeftButtonDown">
     <Grid>
-        <MediaElement Visibility="Visible" x:Name="Media" UnloadedBehavior="Manual" MediaEnded="MediaElement_MediaEnded" Stretch="Fill"></MediaElement>
-        <Label x:Name="LoadingLabel" Opacity="0.5" Content="Loading" FontSize="90" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+        <Image
+               wpfanimated:ImageBehavior.AnimatedSource="/gif/6os.gif"
+               wpfanimated:ImageBehavior.RepeatBehavior="1"
+               wpfanimated:ImageBehavior.AnimateInDesignMode="False"
+               wpfanimated:ImageBehavior.AutoStart="True"/>
     </Grid>
 </Window>

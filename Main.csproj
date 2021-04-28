@@ -85,6 +85,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -191,7 +194,7 @@
     <None Include="gif\loading.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="gif\6os.gif" />
+    <Resource Include="gif\6os.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\BackLoad.jpg" />
