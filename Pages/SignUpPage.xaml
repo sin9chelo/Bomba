@@ -8,7 +8,7 @@
       d:DesignHeight="288" d:DesignWidth="340" 
       Title="SignUpPage">
     <Page.Resources>
-        <ResourceDictionary Source="/LoginResourceDictionary.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"></ResourceDictionary>
     </Page.Resources>
     <Grid Background="Transparent">
         <Grid.RowDefinitions>

@@ -33,7 +33,7 @@ namespace Main.StartWindows
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
             LoginAuthorPage.Content = new SignInPage();
-            Color color = (Color)ColorConverter.ConvertFromString("#e5e8c8");
+            Color color = (Color)ColorConverter.ConvertFromString("#6AD1FE");
             InLine.Background = new SolidColorBrush(color);
             UpLine.Background = new SolidColorBrush(Colors.Transparent);
         }
@@ -41,7 +41,7 @@ namespace Main.StartWindows
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
             LoginAuthorPage.Content = new SignUpPage();
-            Color color = (Color)ColorConverter.ConvertFromString("#e5e8c8");
+            Color color = (Color)ColorConverter.ConvertFromString("#6AD1FE");
             UpLine.Background = new SolidColorBrush(color);
             InLine.Background = new SolidColorBrush(Colors.Transparent);
         }

@@ -1,78 +1,141 @@
 ﻿<Page x:Class="Main.Pages.ProfilePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       xmlns:local="clr-namespace:Main.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="1000"
+      d:DesignHeight="524" d:DesignWidth="1000"
       Title="ProfilePage">
     <Page.Resources>
-        <ResourceDictionary Source="/ResourceDictionary/ProfileDictionary.xaml"></ResourceDictionary>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionary/ProfileDictionary.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.7*"/>
             <ColumnDefinition/>
-            <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Grid.Column="0">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="#003248" Offset="0"/>
-                    <GradientStop Color="#001933" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="2.5*"/>
                 <RowDefinition/>
-                <RowDefinition Height="2*"/>
+                <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Border Name="BorderLine" Style="{StaticResource BorderStl}">
-                    <TextBlock Text="Setting" Style="{StaticResource TextStl}">
+            <Grid Grid.Row="1">
+                <StackPanel HorizontalAlignment="Center" Name="ImagePanel" Orientation="Vertical">
+                    <Image Width="140" Height="140" Name="ImgSlot" Source="{svgc:SvgImage Source=/image/user.svg}">
+                        
+                    </Image>
+                    <Button Content="Upload Image" Style="{StaticResource UploadBtn}" Click="UploadImage_Click">
+
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Vertical"  Name="UsernamePanel">
+                    <TextBlock Text="Username" Style="{StaticResource SettingText}">
                         
                     </TextBlock>
+                    <Border Name="UserBorder" Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Test" Name="UsernameText" Style="{StaticResource SetBox}">
+
+                        </TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="3">
+                <StackPanel Orientation="Vertical" Name="RealnamePanel">
+                    <TextBlock Text="Realname" Style="{StaticResource SettingText}">
+
+                    </TextBlock>
+                    <Border Name="RealNBorder" Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Test" Name="RealnameText" Style="{StaticResource SetBox}">
+                            
+                        </TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Border Name="SignBorder" Style="{StaticResource BorderBtn}">
+                    <Button Name="SignBtn" Content="Save Change" Style="{StaticResource BtnSave}">
+
+                    </Button>
                 </Border>
             </Grid>
+        </Grid>
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.4*"/>
-                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" Orientation="Horizontal">
-                    <Image x:Name="UserSet"  Width="30" Height="30" Source="{svgc:SvgImage Source=/image/UserSetting.svg}">
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Width="40" Height="40" Source="{svgc:SvgImage Source=/image/crosshair.svg}" VerticalAlignment="Bottom">
 
                     </Image>
-                    <Button Content="Personal Settings" Style="{StaticResource PersonalBtn}" Click="PersonalSetting_Click"></Button>
-                </StackPanel>
-                <StackPanel Grid.Row="1" Orientation="Horizontal">
-                    <Image x:Name="LockSet"  Width="30" Height="30" Source="{svgc:SvgImage Source=/image/lock.svg}">
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <TextBlock Text="PRIVACY" Style="{StaticResource SettingText}" FontSize="30" VerticalAlignment="Bottom">
+
+                    </TextBlock>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Image Width="40" Height="40" Source="{svgc:SvgImage Source=/image/crosshair.svg}" VerticalAlignment="Top">
 
                     </Image>
-                    <Button Content="Security/entrance" Style="{StaticResource PersonalBtn}"></Button>
-                </StackPanel>
-                <Grid Grid.Column="1">
-                    
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <TextBlock Text="SECURITY" Style="{StaticResource SettingText}" FontSize="30" VerticalAlignment="Top">
+
+                    </TextBlock>
                 </Grid>
             </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Vertical"  Name="OPassPanel">
+                    <TextBlock Text="Old Password" Style="{StaticResource SettingText}">
+
+                    </TextBlock>
+                    <Border Name="OPassBorder" Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Test" Name="OPassText" Style="{StaticResource SetBox}">
+
+                        </TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="3">
+                <StackPanel Orientation="Vertical" Name="NPassPanel">
+                    <TextBlock Text="New Password" Style="{StaticResource SettingText}">
+
+                    </TextBlock>
+                    <Border Name="NPassBorder" Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Test" Name="NPassText" Style="{StaticResource SetBox}">
+
+                        </TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
         </Grid>
-        <Rectangle Grid.Column="2">
-            <Rectangle.Fill>
-                <LinearGradientBrush>
-                    <GradientStop Color="#003248" Offset="0"/>
-                    <GradientStop Color="#001933" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Column="1" CanContentScroll="True" Name="ScrollProf">
-            <Frame Name="SettingsFrame" Grid.Column="1" NavigationUIVisibility="Hidden" Source="PersonalSettingsPage.xaml">
-                
-            </Frame>
-        </ScrollViewer>
     </Grid>
 </Page>

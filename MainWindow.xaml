@@ -10,76 +10,92 @@
         MouseLeftButtonDown="MoveGrid_MouseLeftButtonDown"
         Title="MainWindow" Height="600" Width="1000" Margin="0" MinHeight="600" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True">
     <Window.Resources>
-        <ResourceDictionary Source="MainResourceDictionary.xaml"/>
+        <ResourceDictionary Source="/ResourceDictionary/MainResourceDictionary.xaml"/>
     </Window.Resources>
     <Grid>
+        <Rectangle Grid.Column="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#001C2C" Offset="0"/>
+                    <GradientStop Color="#0A405F" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Grid x:Name="Container">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.045*"></RowDefinition>
-                <RowDefinition Height="0.06*"></RowDefinition>
-                <RowDefinition></RowDefinition>
                 <RowDefinition Height="0.1*"></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="#001933" x:Name="MoveGrid">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                    <ColumnDefinition Width="30"></ColumnDefinition>
-                    <ColumnDefinition Width="30"></ColumnDefinition>
-                    <ColumnDefinition Width="30"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <!--<Button Grid.Column="0" Click="AddNewUser_Click" Background="#1D1824" Content="Connect" Foreground="White">
+            <Border Grid.Row="0">
+                <Grid Grid.Row="0"  x:Name="MoveGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="0.03*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.03*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.03*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <!--<Button Grid.Column="0" Click="AddNewUser_Click" Background="#1D1824" Content="Connect" Foreground="White">
                     
                 </Button>-->
-                <Button Grid.Column="10" Style="{StaticResource ExitBtn}" Click="Close_Window">
-                  
-                </Button>
-                <Button Grid.Column="9" Style="{StaticResource SizeBtn}" Click="MinMax_Window">
-                    
-                </Button>
-                <Button Grid.Column="8" Style="{StaticResource OverBtn}" Click="Button_MouseDown" Margin="0.2,10,0.2,0.4" >
-                    
-                </Button>
-                <Button Grid.Column="7" Content="Profile" Style="{StaticResource ProfileStyle}" Click="Profile_Click">
-                    
-                </Button>
-            </Grid>
-            <Grid Grid.Row="1" Background="#001933">
-                <!--<TextBlock Name="Out" Foreground="White"></TextBlock>-->
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*"/>
-                    <ColumnDefinition Width="0.5*"/>
-                    <ColumnDefinition Width="0.5*"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
-                    <Button Name="StoreBtn" Content="STORE" Style="{StaticResource ActiveBtn}" Click="StoreAct_Click">
+                    <Button Grid.Column="3" Style="{StaticResource ExitBtn}" Click="Close_Window">
+
+                    </Button>
+                    <Button Grid.Column="2" Style="{StaticResource SizeBtn}" Click="MinMax_Window">
+
+                    </Button>
+                    <Button Grid.Column="1" Style="{StaticResource OverBtn}" Click="Button_MouseDown">
 
                     </Button>
                 </Grid>
-                <Grid Grid.Column="1">
-                    <Button Name="LibraryBtn" Content="LIBRARY" Style="{StaticResource ActiveBtn}">
+            </Border>
+            <Border Grid.Row="1" BorderThickness="2" BorderBrush="#6AD1FE">
+                <Grid Grid.Row="1">
+                    <!--<TextBlock Name="Out" Foreground="White"></TextBlock>-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"  Style="{StaticResource BorderS}">
+                        <Button Content="Logo" Style="{StaticResource ActiveBtn}">
 
-                    </Button>
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="1"  Style="{StaticResource BorderS}">
+                        <Button Content="Search" Style="{StaticResource ActiveBtn}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="3"  Style="{StaticResource BorderS}">
+                        <Button Content="Store" Style="{StaticResource ActiveBtn}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="4"  Style="{StaticResource BorderS}">
+                        <Button Content="Library" Style="{StaticResource ActiveBtn}">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="5"  Style="{StaticResource BorderS}">
+                        <Button Content="Profile" Style="{StaticResource ActiveBtn}" Click="Profile_Click">
+
+                        </Button>
+                    </Border>
+                    <Border Grid.Column="6"  Style="{StaticResource BorderS}">
+                        <Button Content="Exit" Style="{StaticResource ActiveBtn}">
+
+                        </Button>
+                    </Border>
                 </Grid>
-                <Grid Grid.Column="2">
-                    <Button Name="ProfileBtn" Content="PROFILE" Style="{StaticResource ActiveBtn}">
-                        
-                    </Button>
-                </Grid>
-            </Grid>
-            <Frame Grid.Row="2" Name="ActiveFrame" NavigationUIVisibility="Hidden" Background="#000000">
+            </Border>
+            <Frame Grid.Row="2" Name="ActiveFrame" NavigationUIVisibility="Hidden">
                 
             </Frame>
-            <Grid Grid.Row="3" Background="#001933">
-
-            </Grid>
         </Grid>
     </Grid>
 </Window>

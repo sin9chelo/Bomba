@@ -4,7 +4,7 @@
     <!--Upload Button-->
     <Style TargetType="Button" x:Key="UploadBtn">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="#a9ac8e"/>
+        <Setter Property="Foreground" Value="#6AD1FE"/>
         <Setter Property="FontSize" Value="24"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="BorderThickness" Value="0"/>
@@ -25,6 +25,8 @@
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="#6AD1FE"/>
+                    <Setter Property="BorderThickness" Value="2"/>
                 </MultiTrigger.Setters>
             </MultiTrigger>
         </Style.Triggers>
@@ -77,8 +79,60 @@
     <!--Profile Text Style-->
     <Style TargetType="TextBlock" x:Key="TestStyle">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="FontSize" Value="18"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-    </Style> 
+    </Style>
+
+    <!--Buffer TextBox Style-->
+    <Style TargetType="TextBox" x:Key="ChangeBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    
+    <!--Place for Setting in profile-->
+    <Style TargetType="TextBox" x:Key="SetBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#6AD1FE"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="CaretBrush" Value="#6AD1FE"/>
+    </Style>
+    
+    <!--Text under settings place-->
+    <Style TargetType="TextBlock" x:Key="SettingText">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#6AD1FE"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+    
+    <!--Save Button-->
+    <Style TargetType="Button" x:Key="BtnSave">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="Foreground" Value="#6AD1FE"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

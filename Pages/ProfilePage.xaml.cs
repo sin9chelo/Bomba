@@ -1,13 +1,19 @@
-﻿using System.Windows.Controls;
-using Microsoft.Win32;
-using f = System.Windows.Forms;
-using System.IO;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using f = System.Windows.Forms;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace Main.Pages
 {
@@ -21,9 +27,17 @@ namespace Main.Pages
             InitializeComponent();
         }
 
-        private void PersonalSetting_Click(object sender, RoutedEventArgs e)
+        private void UploadImage_Click(object sender, RoutedEventArgs e)
         {
-            SettingsFrame.Content = new PersonalSettingsPage();
+            OpenFileDialog file = new OpenFileDialog();
+            file.DefaultExt = ".png";
+            file.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+
+            if(file.ShowDialog() == true)
+            {
+                Uri fileUri = new Uri(file.FileName);
+                ImgSlot.Source = new BitmapImage(fileUri);
+            }
         }
     }
 }

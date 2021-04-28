@@ -46,7 +46,6 @@ namespace Main
         {
             ActiveFrame.Content = new StorePage();
         }
-
         private void Profile_Click(object sender, RoutedEventArgs e)
         {
             ActiveFrame.Content = new ProfilePage();

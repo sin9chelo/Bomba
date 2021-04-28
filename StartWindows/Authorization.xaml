@@ -8,9 +8,17 @@
         mc:Ignorable="d"
         Title="Authorization" Height="560" Width="570" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="Authoriz_MouseLeftButtonDown">
     <Window.Resources>
-        <ResourceDictionary Source="/LoginResourceDictionary.xaml"/>
+        <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"/>
     </Window.Resources>
-    <Grid Background="#1c1f1f">
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#001C2C" Offset="0"/>
+                    <GradientStop Color="#0A405E" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <Grid Height="450" Width="340">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.28*"></RowDefinition>
@@ -28,7 +36,7 @@
                 <Grid Grid.Column="0">
                     <StackPanel VerticalAlignment="Center">
                         <Button Name="SignUp" Content="SIGN UP" Style="{StaticResource SignUp_In}" Click="SignUp_Click"></Button>
-                        <TextBlock Name="UpLine" Width="90" Height="3" Background="#e5e8c8"></TextBlock>
+                        <TextBlock Name="UpLine" Width="90" Height="3" Background="#6AD1FE"></TextBlock>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Column="1">
