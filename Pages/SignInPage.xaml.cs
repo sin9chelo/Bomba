@@ -1,7 +1,9 @@
-﻿using Main.StartWindows;
+﻿using Main.DB;
+using Main.StartWindows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,12 +27,48 @@ namespace Main.Pages
         {
             InitializeComponent();
         }
+        public string GetHash(string input)
+        {
+            var md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            return Convert.ToBase64String(hash);
+        }
+        private bool IsEqualData(string username, string password)
+        {
+            bool flag = false;
+            using (ApplicationDBEntities context = new ApplicationDBEntities())
+            {
+                var users = context.USER.ToList();
+                foreach(USER u in users)
+                {
+                    if (username == u.USERNAME && GetHash(password) == u.PASSWORD_HASH)
+                        flag = true;
+                }
+            }
+            return flag;
+        }
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            Loading load = new Loading();
-            load.Show();
-            Application.Current.MainWindow.Close();
+            using (ApplicationDBEntities context = new ApplicationDBEntities())
+            {
+                var users = context.USER.ToList();
+                foreach (USER u in users)
+                {
+                    if (IsEqualData(SignBoxLogin.Text, SignBoxPassword.Text))
+                    {
+                        Loading load = new Loading();
+                        load.Show();
+                        Application.Current.MainWindow.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bad info!");
+                    }
+                }
+            }
         }
+
     }
 }
