@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using Main.DB;
+using System.Security.Cryptography;
 
 namespace Main.Pages
 {
@@ -19,9 +21,28 @@ namespace Main.Pages
         {
             InitializeComponent();
         }
+        public string GetHash(string input)
+        {
+            var md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
 
+            return Convert.ToBase64String(hash);
+        }
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                using (ApplicationDBEntities context = new ApplicationDBEntities())
+                {
+                    USER user = new USER(SignBoxLogin.Text, GetHash(SignBoxPassword.Text), SignBoxEmail.Text);
+                    context.USER.Add(user);
+                    context.SaveChanges();
+                }
+            }
+            catch
+            {
+
+            }
             Loading load = new Loading();
             load.Show();
             Application.Current.MainWindow.Close();

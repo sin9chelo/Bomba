@@ -1,8 +1,8 @@
-﻿using Main.Entity;
-using Main.Pages;
-using System;
+﻿using Main.Pages;
 using System.Windows;
 using System.Windows.Input;
+using Main.StartWindows;
+using System;
 
 namespace Main
 {
@@ -51,22 +51,17 @@ namespace Main
             ActiveFrame.Content = new ProfilePage();
         }
 
-        //private void AddNewUser_Click(object sender, RoutedEventArgs e)
-        //{
-        //    using (var context = new UserContext())
-        //    {
-        //        var user = new User()
-        //        {
-        //            Name = "Vitalik",
-        //            Mail = "invalid@mail.ru",
-        //            Password = "riki228Q%"
-        //        };
-        //        context.Users.Add(user);
-        //        context.SaveChanges();
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.MainWindow.Close();
+            Authorization author = new Authorization();
+            author.Show();
+            //Application.Current.MainWindow.Close();
+        }
 
-        //        Out.Text = Convert.ToString($"Id {user.Id}, Name {user.Name}, Mail {user.Mail}, Password {user.Password}");
-        //    }
-
-        //}
+        private void Store_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveFrame.Content = new StorePage();
+        }
     }
 }

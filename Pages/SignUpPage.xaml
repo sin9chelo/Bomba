@@ -33,7 +33,7 @@
         </Grid>
         <Grid Grid.Row="2">
             <Border Name="SignBorderEmail" Style="{StaticResource BorderStyle}">
-                <TextBox Name="SignBoxEmail" Tag="Mail" Style="{StaticResource SignBox}">
+                <TextBox  Name="SignBoxEmail" Tag="Mail" Style="{StaticResource SignBox}">
 
                 </TextBox>
             </Border>
