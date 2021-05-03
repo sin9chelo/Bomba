@@ -95,6 +95,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\interfaces\base\IRepository.cs" />
+    <Compile Include="Data\interfaces\IGameRepository.cs" />
+    <Compile Include="Data\interfaces\IUserGameRepository.cs" />
+    <Compile Include="Data\interfaces\IUserRepository.cs" />
+    <Compile Include="Data\repositories\base\Repository.cs" />
+    <Compile Include="Data\repositories\GameRepository.cs" />
+    <Compile Include="Data\repositories\UserGameRepository.cs" />
+    <Compile Include="Data\repositories\UserRepository.cs" />
     <Compile Include="DB\GAME.cs">
       <DependentUpon>GameModel.tt</DependentUpon>
     </Compile>
@@ -134,6 +142,7 @@
     <Compile Include="Pages\StorePage.xaml.cs">
       <DependentUpon>StorePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\UnitOfWork.cs" />
     <Compile Include="StartWindows\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
