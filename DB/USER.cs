@@ -27,7 +27,6 @@ namespace Main.DB
             this.PASSWORD_HASH = password;
             this.MAIL = mail;
             this.BALANCE = 0;
-            this.REALNAME = "ok";
 
         }
         public int USER_ID { get; set; }

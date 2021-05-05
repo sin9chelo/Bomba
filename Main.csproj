@@ -189,6 +189,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ResourceDictionary\StoreResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StartWindows\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -259,9 +263,7 @@
   <ItemGroup>
     <Resource Include="gif\laod.gif" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images for games\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -276,6 +278,26 @@
       <DependentUpon>GameModel.edmx</DependentUpon>
       <LastGenOutput>GameModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="images for games\FarCry5.jpg" />
+    <Resource Include="images for games\CivilizationVI.jpg" />
+    <Resource Include="images for games\Rainbow.png" />
+    <Resource Include="images for games\CallOfDutyBlackOps.png" />
+    <Resource Include="images for games\Cyberpunk.jpg" />
+    <Resource Include="images for games\battlefield1.jpg" />
+    <Resource Include="images for games\StarWarsJedi.jpg" />
+    <Resource Include="images for games\MadMax.jpg" />
+    <Resource Include="images for games\WG2.jpg" />
+    <Resource Include="images for games\Diablo.jpg" />
+    <Resource Include="images for games\Dishonored.jpeg" />
+    <Resource Include="images for games\TheDivision.jpg" />
+    <Resource Include="images for games\GTASA.jpg" />
+    <Resource Include="images for games\StarCraft.jpg" />
+    <Resource Include="images for games\DarkSouls.jpg" />
+    <Resource Include="images for games\RDR2.png" />
+    <Resource Include="images for games\residentEvil.jpg" />
+    <Resource Include="images for games\gta5.jpg" />
+    <Resource Include="images for games\Horizon.jpeg" />
+    <Resource Include="images for games\Witcher.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

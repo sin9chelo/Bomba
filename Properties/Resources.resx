@@ -118,29 +118,80 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BackLoad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image\BackLoad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="battlefield1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\battlefield1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CallOfDutyBlackOps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\callofdutyblackops.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CivilizationVI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\civilizationvi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="crosshair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\crosshair.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="laod" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\gif\laod.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cyberpunk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\cyberpunk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\gif\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DarkSouls" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\darksouls.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diablo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\diablo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dishonored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\dishonored.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FarCry5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\farcry5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gta5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\gta5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GTASA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\gtasa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Horizon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\horizon.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\lock.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MadMax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\madmax.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rainbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\rainbow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RDR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\rdr2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="residentEvil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\residentevil.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="size" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\size.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StarCraft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\starcraft.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StarWarsJedi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\starwarsjedi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TheDivision" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\thedivision.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\user.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="UserSetting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\usersetting.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\wg2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Witcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images for games\witcher.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_6os" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\gif\6os.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

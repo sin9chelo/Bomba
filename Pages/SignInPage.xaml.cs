@@ -27,13 +27,6 @@ namespace Main.Pages
         {
             InitializeComponent();
         }
-        public string GetHash(string input)
-        {
-            var md5 = MD5.Create();
-            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-            return Convert.ToBase64String(hash);
-        }
         private bool IsEqualData(string username, string password)
         {
             bool flag = false;
@@ -42,7 +35,7 @@ namespace Main.Pages
                 var users = context.USER.ToList();
                 foreach(USER u in users)
                 {
-                    if (username == u.USERNAME && GetHash(password) == u.PASSWORD_HASH)
+                    if (username == u.USERNAME && App.GetHash(password) == u.PASSWORD_HASH)
                         flag = true;
                 }
             }
@@ -61,10 +54,12 @@ namespace Main.Pages
                         Loading load = new Loading();
                         load.Show();
                         Application.Current.MainWindow.Close();
+                        break;
                     }
                     else
                     {
                         MessageBox.Show("Bad info!");
+                        break;
                     }
                 }
             }
