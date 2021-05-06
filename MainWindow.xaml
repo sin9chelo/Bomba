@@ -91,7 +91,7 @@
                 </Grid>
             </Border>
             <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Hidden">
-                <Frame ScrollViewer.CanContentScroll="True" Name="ActiveFrame" NavigationUIVisibility="Hidden" >
+                <Frame ScrollViewer.CanContentScroll="True"  Name="ActiveFrame" NavigationUIVisibility="Hidden" >
 
                 </Frame>
             </ScrollViewer>

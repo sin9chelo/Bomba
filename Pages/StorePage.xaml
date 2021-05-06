@@ -5,63 +5,36 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Main.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="2024" d:DesignWidth="1000" Height="1500" Width="1000"
+      d:DesignHeight="2024" d:DesignWidth="1000" MinHeight="1000" MinWidth="1000" MaxHeight="4000" MaxWidth="1650"
       Title="StorePage">
+    <Page.Resources>
+        <ResourceDictionary Source="/ResourceDictionary/StoreResourceDictionary.xaml"/>
+    </Page.Resources>
+    <Grid Margin="50 20">
+        <ItemsControl ItemsSource="{Binding Games}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.05*"/>
-            <RowDefinition Height="0.4*"/>
-            <RowDefinition/>
-            <RowDefinition Height="0.05*"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.05*"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="0.05*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Button Name="WitcherBtn" Margin="12" Grid.Row="0" Grid.Column="0">
-                    <StackPanel Name="WitcherPanel"  Grid.Row="0" Grid.Column="0" Orientation="Vertical">
-                        <Image RenderOptions.BitmapScalingMode="HighQuality" Name="Witcher" Source="/images for games/Witcher.jpg"></Image>
-                        <Grid Height="60">
-                            <Grid.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#001C2C" Offset="0"/>
-                                    <GradientStop Color="#0A405F" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Grid.Background>
-                        </Grid>
-                    </StackPanel>
-                </Button>
-                <Button Name="HorizonBtn" Margin="12" Grid.Row="0" Grid.Column="1">
-                    <StackPanel Name="HorizonPanel"  Grid.Row="0" Grid.Column="1" Orientation="Vertical">
-                        <Image RenderOptions.BitmapScalingMode="HighQuality" Name="Horizon" Source="/images for games/Horizon.jpeg"></Image>
-                        <Grid Height="60">
-                            <Grid.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#001C2C" Offset="0"/>
-                                    <GradientStop Color="#0A405F" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Grid.Background>
-                        </Grid>
-                    </StackPanel>
-                </Button>
-            </Grid>
-        </Grid>
+                    </WrapPanel>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="250" Width="350">
+                        <Button Name="WitcherBtn" Margin="12" Grid.Row="0" Grid.Column="0" Cursor="Hand" Style="{StaticResource BorderBtn}">
+                            <StackPanel Name="WitcherPanel"  Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+                                <Image RenderOptions.BitmapScalingMode="HighQuality"  Name="Witcher" Source="{Binding GAME_ADDRESS}"></Image>
+                                <Border BorderThickness="0, 1, 0, 0" BorderBrush="#6AD1FE">
+                                    <Grid Height="60" Background="#001C2C">
+                                        <TextBlock Text="{Binding NAME}" Style="{StaticResource StyleName}"/>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Page>

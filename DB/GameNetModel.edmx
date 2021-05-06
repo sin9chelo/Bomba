@@ -11,10 +11,10 @@
           </Key>
           <Property Name="GAME_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="PRICE" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="PRICE" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PDATE" Type="date" Nullable="false" />
           <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="SIZE" Type="decimal" Precision="12" Scale="5" Nullable="false" />
+          <Property Name="SIZE" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="GAME_PLATFORM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="GAME_ADDRESS" Type="nvarchar(max)" Nullable="false" />
@@ -97,10 +97,10 @@
           </Key>
           <Property Name="GAME_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PRICE" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="PRICE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PDATE" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SIZE" Type="Decimal" Precision="12" Scale="5" Nullable="false" />
+          <Property Name="SIZE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="GAME_PLATFORM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="GAME_ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />

@@ -104,31 +104,31 @@
     <Compile Include="Data\repositories\UserGameRepository.cs" />
     <Compile Include="Data\repositories\UserRepository.cs" />
     <Compile Include="DB\GAME.cs">
-      <DependentUpon>GameModel.tt</DependentUpon>
+      <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\GameModel.Context.cs">
+    <Compile Include="DB\GameNetModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GameModel.Context.tt</DependentUpon>
+      <DependentUpon>GameNetModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\GameModel.cs">
+    <Compile Include="DB\GameNetModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GameModel.tt</DependentUpon>
+      <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\GameModel.Designer.cs">
+    <Compile Include="DB\GameNetModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GameModel.edmx</DependentUpon>
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>GameModel.tt</DependentUpon>
+      <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\USER.cs">
-      <DependentUpon>GameModel.tt</DependentUpon>
+      <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\USER_GAME.cs">
-      <DependentUpon>GameModel.tt</DependentUpon>
+      <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
@@ -149,6 +149,7 @@
     <Compile Include="StartWindows\Loading.xaml.cs">
       <DependentUpon>Loading.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\GamesViewModel.cs" />
     <Page Include="ResourceDictionary\MainResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -220,12 +221,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\GameModel.edmx">
+    <EntityDeploy Include="DB\GameNetModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GameModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>GameNetModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\GameModel.edmx.diagram">
-      <DependentUpon>GameModel.edmx</DependentUpon>
+    <None Include="DB\GameNetModel.edmx.diagram">
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -263,21 +264,13 @@
   <ItemGroup>
     <Resource Include="gif\laod.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\GameModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameModel.edmx</DependentUpon>
-      <LastGenOutput>GameModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DB\GameModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameModel.edmx</DependentUpon>
-      <LastGenOutput>GameModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="images for games\FarCry5.jpg" />
     <Resource Include="images for games\CivilizationVI.jpg" />
     <Resource Include="images for games\Rainbow.png" />
@@ -298,6 +291,18 @@
     <Resource Include="images for games\gta5.jpg" />
     <Resource Include="images for games\Horizon.jpeg" />
     <Resource Include="images for games\Witcher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\GameNetModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
+      <LastGenOutput>GameNetModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\GameNetModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
+      <LastGenOutput>GameNetModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
