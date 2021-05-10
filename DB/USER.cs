@@ -19,7 +19,6 @@ namespace Main.DB
         {
             this.USER_GAME = new HashSet<USER_GAME>();
         }
-        Random random = new Random();
         public int _startBalance = 0;
         public USER(string username, string password, string mail)
         {

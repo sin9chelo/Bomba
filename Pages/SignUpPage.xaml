@@ -3,10 +3,13 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Main.Pages"
+      xmlns:local="clr-namespace:Main.Validation"
       mc:Ignorable="d"
       d:DesignHeight="288" d:DesignWidth="340" 
       Title="SignUpPage">
+    <Page.DataContext>
+        <local:Validation_ByAnnotas/>
+    </Page.DataContext>
     <Page.Resources>
         <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"></ResourceDictionary>
     </Page.Resources>
@@ -19,21 +22,21 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Border Name="SignBorderLogin" Style="{StaticResource BorderStyle}">
-                <TextBox Name="SignBoxLogin" Tag="Username" Style="{StaticResource SignBox}">
-
+                <TextBox Name="SignBoxLogin" Text="{Binding Username, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" Tag="Username" Style="{StaticResource SignBox}">
+                    
                 </TextBox>
             </Border>
         </Grid>
         <Grid Grid.Row="1">
             <Border Name="SignBorderPassword" Style="{StaticResource BorderStyle}">
-                <TextBox Name="SignBoxPassword" Tag="Password" Style="{StaticResource SignBox}">
+                <TextBox Name="SignBoxPassword" Tag="Password" Style="{StaticResource SignBox}" Text="{Binding Password, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}">
 
                 </TextBox>
             </Border>
         </Grid>
         <Grid Grid.Row="2">
             <Border Name="SignBorderEmail" Style="{StaticResource BorderStyle}">
-                <TextBox  Name="SignBoxEmail" Tag="Mail" Style="{StaticResource SignBox}">
+                <TextBox  Name="SignBoxEmail" Tag="Mail" Style="{StaticResource SignBox}" Text="{Binding Mail, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}">
 
                 </TextBox>
             </Border>

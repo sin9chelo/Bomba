@@ -1,4 +1,5 @@
 ﻿using Main.DB;
+using Main.Other;
 using Main.StartWindows;
 using System;
 using System.Collections.Generic;
@@ -53,12 +54,13 @@ namespace Main.Pages
                     {
                         Loading load = new Loading();
                         load.Show();
-                        Application.Current.MainWindow.Close();
+                        Application.Current.MainWindow.Close(); 
                         break;
                     }
                     else
                     {
-                        MessageBox.Show("Bad info!");
+                        FailedWindow win = new FailedWindow();
+                        win.Show();
                         break;
                     }
                 }

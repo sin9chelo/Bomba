@@ -23,22 +23,30 @@ namespace Main.Pages
         }
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if(SignBoxLogin.Text.Length >= 5 && SignBoxPassword.Text.Length >= 5 && SignBoxEmail.Text.Contains("@mail.ru"))
             {
+                SignBtn.IsEnabled = true;
+
                 using (ApplicationDBEntities context = new ApplicationDBEntities())
                 {
                     USER user = new USER(SignBoxLogin.Text, App.GetHash(SignBoxPassword.Text), SignBoxEmail.Text);
                     context.USER.Add(user);
                     context.SaveChanges();
+
+                    Loading load = new Loading();
+                    load.Show();
+                    Application.Current.MainWindow.Close();
                 }
             }
-            catch
+            else
             {
-
+                SignBtn.IsEnabled = false;
             }
-            Loading load = new Loading();
-            load.Show();
-            Application.Current.MainWindow.Close();
+        }
+
+        private void TextBox_Error(object sender, ValidationErrorEventArgs e)
+        {
+            MessageBox.Show(e.Error.ErrorContent.ToString());
         }
     }
 }

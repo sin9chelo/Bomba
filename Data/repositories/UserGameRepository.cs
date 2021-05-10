@@ -9,7 +9,7 @@ using Main.Data.repositories.@base;
 
 namespace Main.Data.repositories
 {
-    class UserGameRepository : Repository<USER_GAME>, IUserGameRepository
+    public class UserGameRepository : Repository<USER_GAME>, IUserGameRepository
     {
         public ApplicationDBEntities AppContext => _context as ApplicationDBEntities;
 

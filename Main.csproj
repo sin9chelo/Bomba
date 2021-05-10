@@ -130,6 +130,9 @@
     <Compile Include="DB\USER_GAME.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Other\FailedWindow.xaml.cs">
+      <DependentUpon>FailedWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
@@ -149,7 +152,13 @@
     <Compile Include="StartWindows\Loading.xaml.cs">
       <DependentUpon>Loading.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Validation\ObservableObject.cs" />
+    <Compile Include="Validation\Validation_ByAnnotas.cs" />
     <Compile Include="ViewModel\GamesViewModel.cs" />
+    <Page Include="Other\FailedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourceDictionary\MainResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -264,9 +273,7 @@
   <ItemGroup>
     <Resource Include="gif\laod.gif" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -303,6 +310,7 @@
       <DependentUpon>GameNetModel.edmx</DependentUpon>
       <LastGenOutput>GameNetModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="image\fail.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

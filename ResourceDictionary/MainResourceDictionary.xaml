@@ -123,4 +123,15 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    
+    <!--Border S1-->
+    <Style TargetType="Border" x:Key="BorderS1">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="#6AD1FE"/>
+                <Setter Property="Background" Value="#4C6AD1FE"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

@@ -60,6 +60,7 @@
                                  x:Name="textSource" 
                                  Background="Transparent" 
                                  Panel.ZIndex="2"
+                                 Foreground="White"
                                  BorderThickness="0"/>
                         <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1" BorderThickness="0">
                             <TextBox.Style>
