@@ -18,6 +18,7 @@
           <Property Name="GAME_PLATFORM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="GAME_ADDRESS" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -104,6 +105,7 @@
           <Property Name="GAME_PLATFORM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="GAME_ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="USER_GAME" Relationship="Self.USER_GAME_GAME_ID_FK" FromRole="GAME" ToRole="USER_GAME" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -194,6 +196,7 @@
                 <ScalarProperty Name="GAME_PLATFORM" ColumnName="GAME_PLATFORM" />
                 <ScalarProperty Name="TYPE" ColumnName="TYPE" />
                 <ScalarProperty Name="GAME_ADDRESS" ColumnName="GAME_ADDRESS" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

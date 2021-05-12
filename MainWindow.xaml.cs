@@ -17,7 +17,7 @@ namespace Main
         }
         private void Close_Window(object sender, RoutedEventArgs e)
         {
-            Main.Close();
+            Environment.Exit(0);
         }
         private void MinMax_Window(object sender, RoutedEventArgs e)
         {
@@ -42,7 +42,7 @@ namespace Main
             this.WindowState = WindowState.Minimized;
         }
 
-        private void StoreAct_Click(object sender, RoutedEventArgs e)
+        private void Store_Click(object sender, RoutedEventArgs e)
         {
             ActiveFrame.Content = new StorePage();
         }
@@ -57,11 +57,6 @@ namespace Main
             Authorization author = new Authorization();
             author.Show();
             //Application.Current.MainWindow.Close();
-        }
-
-        private void Store_Click(object sender, RoutedEventArgs e)
-        {
-            ActiveFrame.Content = new StorePage();
         }
     }
 }

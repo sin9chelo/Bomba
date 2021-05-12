@@ -29,6 +29,7 @@ namespace Main.DB
         public string GAME_PLATFORM { get; set; }
         public string TYPE { get; set; }
         public string GAME_ADDRESS { get; set; }
+        public string DESCRIPTION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER_GAME> USER_GAME { get; set; }

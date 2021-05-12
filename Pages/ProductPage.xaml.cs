@@ -1,6 +1,4 @@
-﻿using Main.Commands;
-using Main.DB;
-using Main.ViewModel;
+﻿using Main.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,15 +17,15 @@ using System.Windows.Shapes;
 namespace Main.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для StorePage.xaml
+    /// Логика взаимодействия для ProductPage.xaml
     /// </summary>
-    public partial class StorePage : Page
+    public partial class ProductPage : Page
     {
-        public StorePage()
+
+        public ProductPage()
         {
             InitializeComponent();
             this.DataContext = new GamesViewModel();
-        }       
+        }
     }
-
 }

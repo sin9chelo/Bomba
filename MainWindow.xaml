@@ -8,7 +8,7 @@
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         mc:Ignorable="d"
         MouseLeftButtonDown="MoveGrid_MouseLeftButtonDown"
-        Title="MainWindow" Height="600" Width="1000" Margin="0" MinHeight="600" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True">
+        Title="MainWindow" Height="600" Width="1000" Margin="0" MinHeight="600" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" Icon="/image/icon.png" RenderOptions.BitmapScalingMode="HighQuality">
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/MainResourceDictionary.xaml"/>
     </Window.Resources>
@@ -59,9 +59,9 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Border Grid.Column="0"  Style="{StaticResource BorderS}">
-                        <Button Content="Logo" Style="{StaticResource ActiveBtn}">
-
-                        </Button>
+                        <Image Name="Logo" RenderOptions.BitmapScalingMode="HighQuality" Source="/image/logo.png" >
+                            
+                        </Image>
                     </Border>
                     <Border Grid.Column="1"  Style="{StaticResource BorderS}">
                         <Button Content="Search" Style="{StaticResource ActiveBtn}">

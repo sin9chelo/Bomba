@@ -1,7 +1,4 @@
-﻿using Main.Commands;
-using Main.DB;
-using Main.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,21 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Main.Pages
+namespace Main.Other
 {
     /// <summary>
-    /// Логика взаимодействия для StorePage.xaml
+    /// Логика взаимодействия для SuccesfullyWindow.xaml
     /// </summary>
-    public partial class StorePage : Page
+    public partial class SuccesfullyWindow : Window
     {
-        public StorePage()
+        public SuccesfullyWindow()
         {
             InitializeComponent();
-            this.DataContext = new GamesViewModel();
-        }       
-    }
+        }
 
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

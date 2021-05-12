@@ -9,6 +9,9 @@ using System.Windows.Controls;
 using System.Windows.Threading;
 using Main.DB;
 using System.Security.Cryptography;
+using Main.Data.Static_Resources;
+using Main.Data;
+using Main.Repositories;
 
 namespace Main.Pages
 {
@@ -27,16 +30,13 @@ namespace Main.Pages
             {
                 SignBtn.IsEnabled = true;
 
-                using (ApplicationDBEntities context = new ApplicationDBEntities())
+                using (UnitOfWork context = new UnitOfWork())
                 {
-                    USER user = new USER(SignBoxLogin.Text, App.GetHash(SignBoxPassword.Text), SignBoxEmail.Text);
-                    context.USER.Add(user);
-                    context.SaveChanges();
 
-                    Loading load = new Loading();
-                    load.Show();
-                    Application.Current.MainWindow.Close();
+                    context.UserRepository.SignUpUser(SignBoxLogin.Text, SignBoxPassword.Text, SignBoxEmail.Text);
+                    
                 }
+                OpenLoad();
             }
             else
             {
@@ -47,6 +47,13 @@ namespace Main.Pages
         private void TextBox_Error(object sender, ValidationErrorEventArgs e)
         {
             MessageBox.Show(e.Error.ErrorContent.ToString());
+        }
+        
+        public void OpenLoad()
+        {
+            Loading load = new Loading();
+            load.Show();
+            Application.Current.MainWindow.Close();
         }
     }
 }

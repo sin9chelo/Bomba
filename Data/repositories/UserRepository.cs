@@ -1,5 +1,6 @@
 ﻿using Main.Data.interfaces;
 using Main.Data.repositories.@base;
+using Main.Data.Static_Resources;
 using Main.DB;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,15 @@ namespace Main.Data.repositories
         public UserRepository(ApplicationDBEntities context) : base(context)
         {
 
+        }
+
+        public void SignUpUser(string login, string password, string username)
+        {
+            USER user = new USER(login, App.GetHash(password), username);
+            AppContext.USER.Add(user);
+            AppContext.SaveChanges();
+
+            CurrentUser.User = user;
         }
     }
 }

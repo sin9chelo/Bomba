@@ -95,6 +95,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Data\Account\Account.cs" />
     <Compile Include="Data\interfaces\base\IRepository.cs" />
     <Compile Include="Data\interfaces\IGameRepository.cs" />
     <Compile Include="Data\interfaces\IUserGameRepository.cs" />
@@ -103,6 +105,8 @@
     <Compile Include="Data\repositories\GameRepository.cs" />
     <Compile Include="Data\repositories\UserGameRepository.cs" />
     <Compile Include="Data\repositories\UserRepository.cs" />
+    <Compile Include="Data\Static Resources\CurrentGame.cs" />
+    <Compile Include="Data\Static Resources\CurrentUser.cs" />
     <Compile Include="DB\GAME.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
@@ -133,6 +137,12 @@
     <Compile Include="Other\FailedWindow.xaml.cs">
       <DependentUpon>FailedWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Other\SuccesfullyWindow.xaml.cs">
+      <DependentUpon>SuccesfullyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductPage.xaml.cs">
+      <DependentUpon>ProductPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
@@ -156,6 +166,14 @@
     <Compile Include="Validation\Validation_ByAnnotas.cs" />
     <Compile Include="ViewModel\GamesViewModel.cs" />
     <Page Include="Other\FailedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Other\SuccesfullyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -273,7 +291,20 @@
   <ItemGroup>
     <Resource Include="gif\laod.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DB\GameNetModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
+      <LastGenOutput>GameNetModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\GameNetModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
+      <LastGenOutput>GameNetModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="image\icon.png" />
+    <Resource Include="image\logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -300,16 +331,6 @@
     <Resource Include="images for games\Witcher.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\GameNetModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameNetModel.edmx</DependentUpon>
-      <LastGenOutput>GameNetModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DB\GameNetModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameNetModel.edmx</DependentUpon>
-      <LastGenOutput>GameNetModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="image\fail.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using Main.Data.Static_Resources;
+using Main.Data.Account;
+using System.Net;
+using Main.DB;
 
 namespace Main.Pages
 {
@@ -25,7 +30,9 @@ namespace Main.Pages
         public ProfilePage()
         {
             InitializeComponent();
+            this.DataContext = new Account();
         }
+
 
         private void UploadImage_Click(object sender, RoutedEventArgs e)
         {
@@ -33,10 +40,24 @@ namespace Main.Pages
             file.DefaultExt = ".png";
             file.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
 
-            if(file.ShowDialog() == true)
+            if (file.ShowDialog() == true)
             {
                 Uri fileUri = new Uri(file.FileName);
                 ImgSlot.Source = new BitmapImage(fileUri);
+            }
+
+
+            using (WebClient wc = new WebClient())
+            {
+                
+            }
+        }
+
+        private void SaveChanges_Click(object sender, RoutedEventArgs e)
+        {
+            using(ApplicationDBEntities context = new ApplicationDBEntities())
+            {
+                
             }
         }
     }

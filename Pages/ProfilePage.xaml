@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       xmlns:local="clr-namespace:Main.Pages"
+      xmlns:username="clr-namespace:Main.Data.Static_Resources"
       mc:Ignorable="d" 
       d:DesignHeight="524" d:DesignWidth="1000"
       Title="ProfilePage">
@@ -48,7 +49,7 @@
                         
                     </TextBlock>
                     <Border Name="UserBorder" Style="{StaticResource BorderStyle}">
-                        <TextBox Text="Test" Name="UsernameText" Style="{StaticResource SetBox}">
+                        <TextBox Text="{Binding Username}" Name="UsernameText" Style="{StaticResource SetBox}">
 
                         </TextBox>
                     </Border>
@@ -68,7 +69,7 @@
             </Grid>
             <Grid Grid.Row="4">
                 <Border Name="SignBorder" Style="{StaticResource BorderBtn}">
-                    <Button Name="SignBtn" Content="Save Change" Style="{StaticResource BtnSave}">
+                    <Button Name="SignBtn" Content="Save Change" Style="{StaticResource BtnSave}" Click="SaveChanges_Click">
 
                     </Button>
                 </Border>
@@ -118,7 +119,7 @@
 
                     </TextBlock>
                     <Border Name="OPassBorder" Style="{StaticResource BorderStyle}">
-                        <TextBox Text="Test" Name="OPassText" Style="{StaticResource SetBox}">
+                        <TextBox Text=""  Name="OPassText" Style="{StaticResource SetBox}">
 
                         </TextBox>
                     </Border>
@@ -130,7 +131,7 @@
 
                     </TextBlock>
                     <Border Name="NPassBorder" Style="{StaticResource BorderStyle}">
-                        <TextBox Text="Test" Name="NPassText" Style="{StaticResource SetBox}">
+                        <TextBox Text="" Name="NPassText" Style="{StaticResource SetBox}">
 
                         </TextBox>
                     </Border>

@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Main.Data.Static_Resources;
 
 namespace Main.Pages
 {
@@ -37,7 +38,10 @@ namespace Main.Pages
                 foreach(USER u in users)
                 {
                     if (username == u.USERNAME && App.GetHash(password) == u.PASSWORD_HASH)
+                    {
                         flag = true;
+                        CurrentUser.User = u;
+                    }
                 }
             }
             return flag;
@@ -48,21 +52,16 @@ namespace Main.Pages
             using (ApplicationDBEntities context = new ApplicationDBEntities())
             {
                 var users = context.USER.ToList();
-                foreach (USER u in users)
+                if (IsEqualData(SignBoxLogin.Text, SignBoxPassword.Text))
                 {
-                    if (IsEqualData(SignBoxLogin.Text, SignBoxPassword.Text))
-                    {
-                        Loading load = new Loading();
-                        load.Show();
-                        Application.Current.MainWindow.Close(); 
-                        break;
-                    }
-                    else
-                    {
-                        FailedWindow win = new FailedWindow();
-                        win.Show();
-                        break;
-                    }
+                    Loading load = new Loading();
+                    load.Show();
+                    Application.Current.MainWindow.Close();
+                }
+                else
+                {
+                    FailedWindow win = new FailedWindow();
+                    win.Show();
                 }
             }
         }

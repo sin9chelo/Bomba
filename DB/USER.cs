@@ -28,6 +28,10 @@ namespace Main.DB
             this.BALANCE = 0;
 
         }
+        public USER(string realname)
+        {
+            this.REALNAME = realname;
+        }
         public int USER_ID { get; set; }
         public string REALNAME { get; set; }
         public string USERNAME { get; set; }

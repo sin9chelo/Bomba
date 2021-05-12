@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main.StartWindows"
         mc:Ignorable="d"
-        Title="Authorization" Height="560" Width="570" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="Authoriz_MouseLeftButtonDown">
+        Title="Authorization" Height="560" Width="570" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="Authoriz_MouseLeftButtonDown"  Icon="/image/icon.png" RenderOptions.BitmapScalingMode="HighQuality">
     <Window.Resources>
         <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"/>
     </Window.Resources>

@@ -10,7 +10,7 @@
     <Page.Resources>
         <ResourceDictionary Source="/ResourceDictionary/StoreResourceDictionary.xaml"/>
     </Page.Resources>
-    <Grid Margin="50 20">
+    <Grid Margin="50 20" x:Name="RootGrid">
         <ItemsControl ItemsSource="{Binding Games}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -22,9 +22,9 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="285" Width="350">
-                        <Button Name="WitcherBtn" Margin="12" Grid.Row="0" Grid.Column="0" Cursor="Hand" Style="{StaticResource BorderBtn}">
+                        <Button Name="WitcherBtn" Margin="12" Grid.Row="0" Grid.Column="0" Cursor="Hand" Style="{StaticResource BorderBtn}" Command="{Binding ElementName=RootGrid, Path=DataContext.GameInfoCommand}" CommandParameter="{Binding GAME_ID}">
                             <StackPanel Name="WitcherPanel"  Grid.Row="0" Grid.Column="0" Orientation="Vertical">
-                                <Image RenderOptions.BitmapScalingMode="HighQuality"  Name="Witcher" Source="{Binding GAME_ADDRESS}"></Image>
+                                <Image RenderOptions.BitmapScalingMode="HighQuality"  Name="Witcher" Source="{Binding GAME_ADDRESS}"/>
                                 <Border BorderThickness="0, 1, 0, 0" BorderBrush="#6AD1FE">
                                     <Grid Height="70" Background="#001C2C">
                                         <Grid.RowDefinitions>

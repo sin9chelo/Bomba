@@ -10,6 +10,6 @@ namespace Main.Data.interfaces
 {
     public interface IUserRepository : IRepository<USER>
     {
-
+        void SignUpUser(string login, string password, string username);
     }
 }
