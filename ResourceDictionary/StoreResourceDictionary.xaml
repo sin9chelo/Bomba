@@ -35,7 +35,7 @@
     
     <!--Game Info Block Style-->
     <Style TargetType="TextBlock" x:Key="InfoStyle">
-        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontSize" Value="22"/>
         <Setter Property="Opacity" Value="0.5"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -44,7 +44,7 @@
     
     <!--Game Info Value Style-->
     <Style TargetType="TextBlock" x:Key="ValueStyle">
-        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontSize" Value="22"/>
         <Setter Property="Foreground" Value="#6AD1FE"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>

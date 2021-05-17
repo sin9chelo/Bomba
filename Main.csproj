@@ -134,6 +134,9 @@
     <Compile Include="DB\USER_GAME.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Other\DoubleWindow.xaml.cs">
+      <DependentUpon>DoubleWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Other\FailedWindow.xaml.cs">
       <DependentUpon>FailedWindow.xaml</DependentUpon>
     </Compile>
@@ -165,6 +168,10 @@
     <Compile Include="Validation\ObservableObject.cs" />
     <Compile Include="Validation\Validation_ByAnnotas.cs" />
     <Compile Include="ViewModel\GamesViewModel.cs" />
+    <Page Include="Other\DoubleWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Other\FailedWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

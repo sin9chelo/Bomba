@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Main.Data.Static_Resources;
+using Main.Repositories;
 
 namespace Main.Pages
 {
@@ -29,40 +30,12 @@ namespace Main.Pages
         {
             InitializeComponent();
         }
-        private bool IsEqualData(string username, string password)
-        {
-            bool flag = false;
-            using (ApplicationDBEntities context = new ApplicationDBEntities())
-            {
-                var users = context.USER.ToList();
-                foreach(USER u in users)
-                {
-                    if (username == u.USERNAME && App.GetHash(password) == u.PASSWORD_HASH)
-                    {
-                        flag = true;
-                        CurrentUser.User = u;
-                    }
-                }
-            }
-            return flag;
-        }
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            using (ApplicationDBEntities context = new ApplicationDBEntities())
+            using (UnitOfWork context = new UnitOfWork())
             {
-                var users = context.USER.ToList();
-                if (IsEqualData(SignBoxLogin.Text, SignBoxPassword.Text))
-                {
-                    Loading load = new Loading();
-                    load.Show();
-                    Application.Current.MainWindow.Close();
-                }
-                else
-                {
-                    FailedWindow win = new FailedWindow();
-                    win.Show();
-                }
+                context.UserRepository.SignInUser(SignBoxLogin.Text, SignBoxPassword.Text);
             }
         }
 

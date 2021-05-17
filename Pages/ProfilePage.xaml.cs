@@ -19,6 +19,7 @@ using Main.Data.Static_Resources;
 using Main.Data.Account;
 using System.Net;
 using Main.DB;
+using Main.Repositories;
 
 namespace Main.Pages
 {
@@ -55,9 +56,23 @@ namespace Main.Pages
 
         private void SaveChanges_Click(object sender, RoutedEventArgs e)
         {
-            using(ApplicationDBEntities context = new ApplicationDBEntities())
+            using (UnitOfWork context = new UnitOfWork())
             {
-                
+                context.UserRepository.ChangeRealname(RealnameText.Text);
+                App.SuccesLoad();
+            }
+        }
+
+        private void SavePassword_Click(object sender, RoutedEventArgs e)
+        {
+            using(UnitOfWork context = new UnitOfWork())
+            {
+                if (context.UserRepository.ChangePassword(NPassText.Text, OPassText.Text))
+                    App.SuccesLoad();
+                else
+                    App.FailedLoad();
+                OPassText.Clear();
+                NPassText.Clear();
             }
         }
     }

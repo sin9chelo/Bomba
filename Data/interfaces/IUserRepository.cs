@@ -11,5 +11,10 @@ namespace Main.Data.interfaces
     public interface IUserRepository : IRepository<USER>
     {
         void SignUpUser(string login, string password, string username);
+        void SignInUser(string username, string password);
+        bool IsEqualData(string username, string password);
+        void ChangeRealname(string realname);
+        bool ChangePassword(string pass, string oldpass);
+        bool FindDuplicate(string username);
     }
 }

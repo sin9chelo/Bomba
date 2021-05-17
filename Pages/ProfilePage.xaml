@@ -57,11 +57,11 @@
             </Grid>
             <Grid Grid.Row="3">
                 <StackPanel Orientation="Vertical" Name="RealnamePanel">
-                    <TextBlock Text="Realname" Style="{StaticResource SettingText}">
-
-                    </TextBlock>
+                    <Grid Name="Buffer">
+                        <TextBlock Text="Realname" Style="{StaticResource SettingText}"/>
+                    </Grid>
                     <Border Name="RealNBorder" Style="{StaticResource BorderStyle}">
-                        <TextBox Text="Test" Name="RealnameText" Style="{StaticResource SetBox}">
+                        <TextBox Text="{Binding Realname, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" Name="RealnameText" Style="{StaticResource SetBox}">
                             
                         </TextBox>
                     </Border>
@@ -69,7 +69,7 @@
             </Grid>
             <Grid Grid.Row="4">
                 <Border Name="SignBorder" Style="{StaticResource BorderBtn}">
-                    <Button Name="SignBtn" Content="Save Change" Style="{StaticResource BtnSave}" Click="SaveChanges_Click">
+                    <Button Name="SignBtn" Content="Save Realname" Style="{StaticResource BtnSave}" Click="SaveChanges_Click">
 
                     </Button>
                 </Border>
@@ -136,6 +136,13 @@
                         </TextBox>
                     </Border>
                 </StackPanel>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Border Name="ChangeBorder" Style="{StaticResource BorderBtn}">
+                    <Button Name="ChangeBtn" Content="Save Password" Style="{StaticResource BtnSave}" Click="SavePassword_Click">
+
+                    </Button>
+                </Border>
             </Grid>
         </Grid>
     </Grid>

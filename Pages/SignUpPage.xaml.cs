@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using Main.Data.Static_Resources;
 using Main.Data;
 using Main.Repositories;
+using Main.Other;
 
 namespace Main.Pages
 {
@@ -26,34 +27,34 @@ namespace Main.Pages
         }
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            if(SignBoxLogin.Text.Length >= 5 && SignBoxPassword.Text.Length >= 5 && SignBoxEmail.Text.Contains("@mail.ru"))
+            using(UnitOfWork context = new UnitOfWork())
             {
-                SignBtn.IsEnabled = true;
-
-                using (UnitOfWork context = new UnitOfWork())
+                if (!context.UserRepository.FindDuplicate(SignBoxLogin.Text))
                 {
+                    if (SignBoxLogin.Text.Length >= 5 && SignBoxPassword.Text.Length >= 5 && SignBoxEmail.Text.Contains("@mail.ru"))
+                    {
+                        SignBtn.IsEnabled = true;
 
-                    context.UserRepository.SignUpUser(SignBoxLogin.Text, SignBoxPassword.Text, SignBoxEmail.Text);
-                    
+
+                        context.UserRepository.SignUpUser(SignBoxLogin.Text, SignBoxPassword.Text, SignBoxEmail.Text);
+
+
+                        App.OpenLoad();
+                    }
+                    else
+                    {
+                        SignBtn.IsEnabled = false;
+                    }
                 }
-                OpenLoad();
-            }
-            else
-            {
-                SignBtn.IsEnabled = false;
+                else
+                    App.DuplicateLoad();
+                    
             }
         }
 
         private void TextBox_Error(object sender, ValidationErrorEventArgs e)
         {
             MessageBox.Show(e.Error.ErrorContent.ToString());
-        }
-        
-        public void OpenLoad()
-        {
-            Loading load = new Loading();
-            load.Show();
-            Application.Current.MainWindow.Close();
         }
     }
 }

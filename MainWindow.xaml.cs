@@ -3,6 +3,8 @@ using System.Windows;
 using System.Windows.Input;
 using Main.StartWindows;
 using System;
+using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace Main
 {
@@ -58,5 +60,6 @@ namespace Main
             author.Show();
             //Application.Current.MainWindow.Close();
         }
+     
     }
 }

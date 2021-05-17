@@ -22,5 +22,14 @@ namespace Main.Data.Account
             }
             set {; }
         }
+
+        public string Realname
+        {
+            get
+            {
+                return CurrentUser.User.REALNAME;
+            }
+            set {; }
+        }
     }
 }
