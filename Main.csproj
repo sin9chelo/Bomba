@@ -134,6 +134,9 @@
     <Compile Include="DB\USER_GAME.cs">
       <DependentUpon>GameNetModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Other\DepositWindow.xaml.cs">
+      <DependentUpon>DepositWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Other\DoubleWindow.xaml.cs">
       <DependentUpon>DoubleWindow.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,10 @@
     <Compile Include="Validation\ObservableObject.cs" />
     <Compile Include="Validation\Validation_ByAnnotas.cs" />
     <Compile Include="ViewModel\GamesViewModel.cs" />
+    <Page Include="Other\DepositWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Other\DoubleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -309,6 +316,7 @@
       <DependentUpon>GameNetModel.edmx</DependentUpon>
       <LastGenOutput>GameNetModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="image\verify.svg" />
     <Resource Include="image\icon.png" />
     <Resource Include="image\logo.png" />
   </ItemGroup>

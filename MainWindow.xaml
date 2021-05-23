@@ -10,7 +10,12 @@
         MouseLeftButtonDown="MoveGrid_MouseLeftButtonDown"
         Title="MainWindow" Height="600" Width="1000" Margin="0" MinHeight="600" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" Icon="/image/icon.png" RenderOptions.BitmapScalingMode="HighQuality">
     <Window.Resources>
-        <ResourceDictionary Source="/ResourceDictionary/MainResourceDictionary.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionary/MainResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <Grid>
         <Rectangle Grid.Column="0">
@@ -52,38 +57,34 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
+                        <ColumnDefinition/>
                         <ColumnDefinition Width="5*"/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0"  Style="{StaticResource BorderS}">
+                    <Border Grid.ColumnSpan="2"  Style="{StaticResource BorderS}">
                         <Image Name="Logo" RenderOptions.BitmapScalingMode="HighQuality" Source="/image/logo.png" >
-                            
+
                         </Image>
                     </Border>
-                    <Border Grid.Column="1"  Style="{StaticResource BorderS}">
-                        <Button Content="Search" Style="{StaticResource ActiveBtn}">
-
-                        </Button>
-                    </Border>
-                    <Border Grid.Column="3"  Style="{StaticResource BorderS}">
+                    <Border Grid.Column="4"  Style="{StaticResource BorderS}">
                         <Button Content="Store" Style="{StaticResource ActiveBtn}" Click="Store_Click">
 
                         </Button>
                     </Border>
-                    <Border Grid.Column="4"  Style="{StaticResource BorderS}">
+                    <Border Grid.Column="5"  Style="{StaticResource BorderS}">
                         <Button Content="Library" Style="{StaticResource ActiveBtn}">
 
                         </Button>
                     </Border>
-                    <Border Grid.Column="5"  Style="{StaticResource BorderS}">
+                    <Border Grid.Column="6"  Style="{StaticResource BorderS}">
                         <Button Content="Profile" Style="{StaticResource ActiveBtn}" Click="Profile_Click">
 
                         </Button>
                     </Border>
-                    <Border Grid.Column="6"  Style="{StaticResource BorderS}">
+                    <Border Grid.Column="7"  Style="{StaticResource BorderS}">
                         <Button Content="Exit" Style="{StaticResource ActiveBtn}" Click="ExitButton_Click">
 
                         </Button>

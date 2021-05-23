@@ -75,5 +75,10 @@ namespace Main.Pages
                 NPassText.Clear();
             }
         }
+
+        private void Deposit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

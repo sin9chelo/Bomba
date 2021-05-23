@@ -31,5 +31,13 @@ namespace Main.Data.Account
             }
             set {; }
         }
+        public decimal? Balance
+        {
+            get
+            {
+                return CurrentUser.User.BALANCE;
+            }
+            set {; }
+        }
     }
 }

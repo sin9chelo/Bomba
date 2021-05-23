@@ -10,6 +10,6 @@ namespace Main.Data.interfaces
 {
     public interface IGameRepository : IRepository<GAME>
     {
-
+        void CurrentGameRe(object obj);
     }
 }

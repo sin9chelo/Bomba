@@ -23,7 +23,9 @@
             <ColumnDefinition Width="0.7*"/>
             <ColumnDefinition Width="0.1*"/>
             <ColumnDefinition Width="0.7*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.1*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -140,6 +142,34 @@
             <Grid Grid.Row="4">
                 <Border Name="ChangeBorder" Style="{StaticResource BorderBtn}">
                     <Button Name="ChangeBtn" Content="Save Password" Style="{StaticResource BtnSave}" Click="SavePassword_Click">
+
+                    </Button>
+                </Border>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Vertical" Name="BalancePanel">
+                    <TextBlock Text="Your balance" Style="{StaticResource SettingText}">
+
+                    </TextBlock>
+                    <Border Name="BalanceBorder" Style="{StaticResource BorderStyle}">
+                        <TextBox Text="{Binding Balance}" IsReadOnly="True" Name="BalanceText" Style="{StaticResource SetBox}">
+
+                        </TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Border Name="BalBorder" Style="{StaticResource BorderBtn}">
+                    <Button Name="DepositBtn" Content="Deposit" Style="{StaticResource BtnSave}" Click="Deposit_Click">
 
                     </Button>
                 </Border>

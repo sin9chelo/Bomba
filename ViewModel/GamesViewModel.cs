@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows;
 using Main.Commands;
 using Main.Data.Static_Resources;
+using Main.Repositories;
+using Main.Pages;
 
 namespace Main.ViewModel
 {
@@ -32,7 +34,25 @@ namespace Main.ViewModel
             GameInfoCommand = new RelayCommand(ExecuteGameInfo);
         }
 
-
+        public void SortByPrice()
+        {
+            Games = new ObservableCollection<GAME>(Games.OrderBy(t => t.PRICE));
+        }
+        public void SortByPDate()
+        {
+            Games = new ObservableCollection<GAME>(Games.OrderBy(t => t.PDATE));
+        }
+        public void GetGameBySearchRequest(string path)
+        {
+            try
+            {
+                Games = new ObservableCollection<GAME>(Games.Where(t => t.NAME.Contains(path)));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public ObservableCollection<GAME> Games
         { 
             get => games;
@@ -130,11 +150,12 @@ namespace Main.ViewModel
             }
         }
 
-        private static void ExecuteGameInfo(object obj)
+        
+        public static void ExecuteGameInfo(object obj)
         {
-            using (ApplicationDBEntities context = new ApplicationDBEntities())
+            using (UnitOfWork context = new UnitOfWork())
             {
-                CurrentGame.Game = context.GAME.Where(g => g.GAME_ID == (int)obj).FirstOrDefault();
+                context.GameRepository.CurrentGameRe(obj);
             }
 
             foreach (Window window in Application.Current.Windows)
