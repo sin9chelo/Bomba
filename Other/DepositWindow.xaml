@@ -3,19 +3,69 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         xmlns:local="clr-namespace:Main.Other"
         mc:Ignorable="d"
-        Title="DepositWindow" Height="350" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanResizeWithGrip"  AllowsTransparency="True" Icon="/image/icon.png" RenderOptions.BitmapScalingMode="HighQuality">
+        Title="DepositWindow" Height="450" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"  AllowsTransparency="True" Icon="/image/icon.png" RenderOptions.BitmapScalingMode="HighQuality">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionary/MainResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid Background="#001C2C">
         <Grid Margin="20">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.25*"/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="0.35*"/>
+                <RowDefinition Height="1.3*"/>
+                <RowDefinition Height="1.3*"/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Button Style="{StaticResource ExitBtn}" Click="Close_Window">
+
+                    </Button>
+                </Grid>
+            </Grid>
+            <TextBlock Grid.Row="1" Text="Adding money to your balance" Foreground="#6AD1FE" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <Grid Grid.Row="2">
+                <Border BorderBrush="#6AD1FE" BorderThickness="0 0 0 1">
+                    <StackPanel Name="InfoPanel" Orientation="Horizontal" Margin="10 0 0 5">
+                        <Image Source="{svgc:SvgImage Source=/image/save-money.svg}"/>
+                        <TextBlock Text="Top up with a stock to always order in one click" VerticalAlignment="Center" FontSize="14" Foreground="#6AD1FE" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Border Name="PaymentBorder" Style="{StaticResource BorderStyle}">
+                    <TextBox Name="PaymentBox" IsEnabled="False" Tag="Payment method: Sponsored by GameNet" FontSize="16" Style="{StaticResource SignBox}">
+
+                    </TextBox>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Border Name="ValueBorder" Style="{StaticResource BorderStyle}" PreviewTextInput="ValueBorder_PreviewTextInput">
+                    <TextBox Name="ValueBox" Tag="Value Max(100 $)" Style="{StaticResource SignBox}">
+
+                    </TextBox>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="5">
+                <Border Name="ConfirmBorder" Style="{StaticResource BorderBtn}">
+                    <Button Name="ConfirmBtn" Content="CONFIRM" Click="ConfirmPay_Click" Style="{StaticResource BtnSign}">
+
+                    </Button>
+                </Border>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

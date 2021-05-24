@@ -102,5 +102,13 @@ namespace Main.Data.repositories
             }
             return flag;
         }
+        public void SetPay(decimal money)
+        {
+            var user = AppContext.USER
+                .Where(c => c.USERNAME == CurrentUser.User.USERNAME)
+                .FirstOrDefault();
+
+            user.BALANCE = money;
+        }
     }
 }

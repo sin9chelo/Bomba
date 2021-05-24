@@ -273,6 +273,16 @@ namespace Main.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
+        internal static byte[] save_money {
+            get {
+                object obj = ResourceManager.GetObject("save_money", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
         internal static byte[] size {
             get {
                 object obj = ResourceManager.GetObject("size", resourceCulture);

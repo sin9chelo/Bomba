@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Main.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,36 @@ namespace Main.Other
         public DepositWindow()
         {
             InitializeComponent();
+        }
+
+        private void Close_Window(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ConfirmPay_Click(object sender, RoutedEventArgs e)
+        {
+            decimal money = Convert.ToDecimal(ValueBox.Text);
+            if (money < 100)
+            {
+                try
+                {
+                    using(UnitOfWork context = new UnitOfWork())
+                    {
+                        context.UserRepository.SetPay(money);
+                        App.SuccesLoad();
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void ValueBorder_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !(Char.IsDigit(e.Text, 0));
         }
     }
 }

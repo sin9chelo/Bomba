@@ -178,6 +178,9 @@
   <data name="residentEvil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images for games\residentevil.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="save_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image\save-money.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="size" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image\size.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

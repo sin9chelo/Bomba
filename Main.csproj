@@ -316,6 +316,7 @@
       <DependentUpon>GameNetModel.edmx</DependentUpon>
       <LastGenOutput>GameNetModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="image\save-money.svg" />
     <Resource Include="image\verify.svg" />
     <Resource Include="image\icon.png" />
     <Resource Include="image\logo.png" />
