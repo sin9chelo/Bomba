@@ -20,6 +20,7 @@ using Main.Data.Account;
 using System.Net;
 using Main.DB;
 using Main.Repositories;
+using Main.Other;
 
 namespace Main.Pages
 {
@@ -78,7 +79,8 @@ namespace Main.Pages
 
         private void Deposit_Click(object sender, RoutedEventArgs e)
         {
-
+            DepositWindow dwin = new DepositWindow();
+            dwin.Show();
         }
     }
 }

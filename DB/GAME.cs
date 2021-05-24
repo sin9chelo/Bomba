@@ -22,7 +22,7 @@ namespace Main.DB
     
         public int GAME_ID { get; set; }
         public string NAME { get; set; }
-        public string PRICE { get; set; }
+        public decimal PRICE { get; set; }
         public System.DateTime PDATE { get; set; }
         public string PUBLISHER { get; set; }
         public string SIZE { get; set; }

@@ -14,6 +14,17 @@ namespace Main.DB
     
     public partial class USER_GAME
     {
+        public USER_GAME()
+        {
+
+        }
+
+        public USER_GAME(int userId, int gameId)
+        {
+            this.USER_ID = userId;
+            this.GAME_ID = gameId;
+        }
+
         public int CONTROL_ID { get; set; }
         public Nullable<int> USER_ID { get; set; }
         public Nullable<int> GAME_ID { get; set; }

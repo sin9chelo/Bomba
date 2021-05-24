@@ -146,11 +146,17 @@
     <Compile Include="Other\SuccesfullyWindow.xaml.cs">
       <DependentUpon>SuccesfullyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\LibraryPage.xaml.cs">
+      <DependentUpon>LibraryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProductPage.xaml.cs">
       <DependentUpon>ProductPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchasePage.xaml.cs">
+      <DependentUpon>PurchasePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
@@ -171,6 +177,7 @@
     <Compile Include="Validation\ObservableObject.cs" />
     <Compile Include="Validation\Validation_ByAnnotas.cs" />
     <Compile Include="ViewModel\GamesViewModel.cs" />
+    <Compile Include="ViewModel\UserGamesViewModel.cs" />
     <Page Include="Other\DepositWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,7 +194,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\LibraryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PurchasePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -306,16 +321,6 @@
     <Resource Include="gif\laod.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\GameNetModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameNetModel.edmx</DependentUpon>
-      <LastGenOutput>GameNetModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DB\GameNetModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GameNetModel.edmx</DependentUpon>
-      <LastGenOutput>GameNetModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="image\save-money.svg" />
     <Resource Include="image\verify.svg" />
     <Resource Include="image\icon.png" />
@@ -348,6 +353,19 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\fail.svg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DB\GameNetModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
+      <LastGenOutput>GameNetModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\GameNetModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameNetModel.edmx</DependentUpon>
+      <LastGenOutput>GameNetModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

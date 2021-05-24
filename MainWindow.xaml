@@ -75,7 +75,7 @@
                         </Button>
                     </Border>
                     <Border Grid.Column="5"  Style="{StaticResource BorderS}">
-                        <Button Content="Library" Style="{StaticResource ActiveBtn}">
+                        <Button Content="Library" Style="{StaticResource ActiveBtn}" Click="Library_Click">
 
                         </Button>
                     </Border>

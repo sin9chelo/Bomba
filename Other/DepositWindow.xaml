@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
-        xmlns:local="clr-namespace:Main.Other"
+        xmlns:local="clr-namespace:Main.Validation"
         mc:Ignorable="d"
-        Title="DepositWindow" Height="450" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"  AllowsTransparency="True" Icon="/image/icon.png" RenderOptions.BitmapScalingMode="HighQuality">
+        Title="DepositWindow" Height="450" Width="420" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"  AllowsTransparency="True" Icon="/image/icon.png" RenderOptions.BitmapScalingMode="HighQuality">
+    <Window.DataContext>
+        <local:Validation_ByAnnotas/>
+    </Window.DataContext>
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -54,7 +57,7 @@
             </Grid>
             <Grid Grid.Row="4">
                 <Border Name="ValueBorder" Style="{StaticResource BorderStyle}" PreviewTextInput="ValueBorder_PreviewTextInput">
-                    <TextBox Name="ValueBox" Tag="Value Max(100 $)" Style="{StaticResource SignBox}">
+                    <TextBox Name="ValueBox" Tag="Value" Text="{Binding Value, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}"  Style="{StaticResource SignBox}">
 
                     </TextBox>
                 </Border>

@@ -73,6 +73,16 @@ namespace Main.ViewModel
 
         public GAME Game => CurrentGame.Game;
 
+        public USER User => CurrentUser.User;
+
+        public string Username
+        {
+            get
+            {
+                return CurrentUser.User.USERNAME;
+            }
+        }  
+
         public ICommand GameInfoCommand
         {
             get;
@@ -86,7 +96,7 @@ namespace Main.ViewModel
             }
         }
 
-        public string Price
+        public decimal Price
         {
             get
             {

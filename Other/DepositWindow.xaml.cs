@@ -1,4 +1,6 @@
-﻿using Main.Repositories;
+﻿using Main.Data.Static_Resources;
+using Main.Pages;
+using Main.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,9 +47,11 @@ namespace Main.Other
                 }
                 catch
                 {
-
+                    
                 }
             }
+            else
+                App.FailedLoad();
         }
 
         private void ValueBorder_PreviewTextInput(object sender, TextCompositionEventArgs e)

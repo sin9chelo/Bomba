@@ -27,5 +27,14 @@ namespace Main.Pages
             InitializeComponent();
             this.DataContext = new GamesViewModel();
         }
+
+        private void PurchaseGame_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                    (window as MainWindow).ActiveFrame.Navigate(new Uri("../Pages/PurchasePage.xaml", UriKind.RelativeOrAbsolute));
+            }
+        }
     }
 }

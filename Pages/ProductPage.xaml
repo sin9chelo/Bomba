@@ -29,7 +29,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="28" Opacity="0.6" Foreground="White"/>
             <Border Grid.Column="1" Name="SignBorder" Style="{StaticResource BorderBtn}">
-                <Button Name="BuyBtn" Content="Purchase" Style="{StaticResource BtnSave}"/>
+                <Button Name="BuyBtn" Content="Purchase" Style="{StaticResource BtnSave}" Click="PurchaseGame_Click"/>
             </Border>
         </Grid>
         <Grid Grid.Row="1">

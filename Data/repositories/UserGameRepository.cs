@@ -17,5 +17,10 @@ namespace Main.Data.repositories
         {
 
         }
+
+        public void AddUserGame(USER_GAME curGame)
+        {
+            AppContext.USER_GAME.Add(curGame);
+        }
     }
 }

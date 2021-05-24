@@ -108,7 +108,20 @@ namespace Main.Data.repositories
                 .Where(c => c.USERNAME == CurrentUser.User.USERNAME)
                 .FirstOrDefault();
 
-            user.BALANCE = money;
+            user.BALANCE += money;
+            AppContext.SaveChanges();
+            CurrentUser.User.BALANCE = user.BALANCE;
+        }
+        public void ChangeBalance(decimal? balance)
+        {
+            var user = AppContext.USER
+                .Where(c => c.USERNAME == CurrentUser.User.USERNAME)
+                .FirstOrDefault();
+
+            user.BALANCE = balance;
+            CurrentUser.User.BALANCE = balance;
+
+            AppContext.SaveChanges();
         }
     }
 }

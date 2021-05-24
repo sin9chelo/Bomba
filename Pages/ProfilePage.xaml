@@ -12,8 +12,8 @@
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/ResourceDictionary/ProfileDictionary.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/ResourceDictionary/ProfileDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/LoginResourceDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -161,7 +161,7 @@
 
                     </TextBlock>
                     <Border Name="BalanceBorder" Style="{StaticResource BorderStyle}">
-                        <TextBox Text="{Binding Balance}" IsReadOnly="True" Name="BalanceText" Style="{StaticResource SetBox}">
+                        <TextBox Text="{Binding Balance, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True" Name="BalanceText" Style="{StaticResource SetBox}">
 
                         </TextBox>
                     </Border>
@@ -169,7 +169,7 @@
             </Grid>
             <Grid Grid.Row="4">
                 <Border Name="BalBorder" Style="{StaticResource BorderBtn}">
-                    <Button Name="DepositBtn" Content="Deposit" Style="{StaticResource BtnSave}" Click="Deposit_Click">
+                    <Button Name="DepositBtn" Content="Deposit" Style="{StaticResource BtnSave}" Click="Deposit_Click" Height="50" VerticalAlignment="Top">
 
                     </Button>
                 </Border>

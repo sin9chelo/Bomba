@@ -17,5 +17,6 @@ namespace Main.Data.interfaces
         bool ChangePassword(string pass, string oldpass);
         bool FindDuplicate(string username);
         void SetPay(decimal money);
+        void ChangeBalance(decimal? balance);
     }
 }

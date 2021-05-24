@@ -19,13 +19,13 @@ namespace Main.DB
         {
             this.USER_GAME = new HashSet<USER_GAME>();
         }
-        public int _startBalance = 0;
+        public decimal _startBalance = 0;
         public USER(string username, string password, string mail)
         {
             this.USERNAME = username;
             this.PASSWORD_HASH = password;
             this.MAIL = mail;
-            this.BALANCE = 0;
+            this.BALANCE = _startBalance;
 
         }
         public USER(string realname)

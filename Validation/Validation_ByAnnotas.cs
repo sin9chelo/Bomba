@@ -51,6 +51,19 @@ namespace Main.Validation
             }
         }
 
+        private string _value;
+
+        [Required(ErrorMessage = "Must not be empty. (1-100$)")]
+        public string Value
+        {
+            get { return _value; }
+            set
+            {
+                ValidateProperty(value, "Value");
+                OnPropertyChanged(ref _value, value);
+            }
+        }
+
         private void ValidateProperty<T>(T value, string name)
         {
             Validator.ValidateProperty(value, new ValidationContext(this, null, null)

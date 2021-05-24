@@ -62,5 +62,10 @@ namespace Main
             author.Show();
             //Application.Current.MainWindow.Close();
         }
+
+        private void Library_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveFrame.Content = new LibraryPage();
+        }
     }
 }

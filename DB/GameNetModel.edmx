@@ -11,7 +11,7 @@
           </Key>
           <Property Name="GAME_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="PRICE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PRICE" Type="decimal" Precision="5" Scale="2" Nullable="false" />
           <Property Name="PDATE" Type="date" Nullable="false" />
           <Property Name="PUBLISHER" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="SIZE" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -38,7 +38,7 @@
           <Property Name="REALNAME" Type="nvarchar" MaxLength="50" />
           <Property Name="USERNAME" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PASSWORD_HASH" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="BALANCE" Type="decimal" Precision="12" Scale="4" />
+          <Property Name="BALANCE" Type="decimal" Precision="5" Scale="2" />
           <Property Name="MAIL" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="USER_GAME">
@@ -98,7 +98,7 @@
           </Key>
           <Property Name="GAME_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PRICE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PRICE" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
           <Property Name="PDATE" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="PUBLISHER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SIZE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -126,7 +126,7 @@
           <Property Name="REALNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PASSWORD_HASH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="BALANCE" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="BALANCE" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="USER_GAME" Relationship="Self.USER_GAME_USER_ID_FK" FromRole="USER" ToRole="USER_GAME" />
         </EntityType>
