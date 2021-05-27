@@ -48,6 +48,7 @@
           <Property Name="CONTROL_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="USER_ID" Type="int" />
           <Property Name="GAME_ID" Type="int" />
+          <Property Name="IsDownload" Type="int" />
         </EntityType>
         <Association Name="USER_GAME_GAME_ID_FK">
           <End Role="GAME" Type="Self.GAME" Multiplicity="0..1" />
@@ -137,6 +138,7 @@
           <Property Name="CONTROL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="USER_ID" Type="Int32" />
           <Property Name="GAME_ID" Type="Int32" />
+          <Property Name="IsDownload" Type="Int32" />
           <NavigationProperty Name="GAME" Relationship="Self.USER_GAME_GAME_ID_FK" FromRole="USER_GAME" ToRole="GAME" />
           <NavigationProperty Name="USER" Relationship="Self.USER_GAME_USER_ID_FK" FromRole="USER_GAME" ToRole="USER" />
         </EntityType>
@@ -229,6 +231,7 @@
                 <ScalarProperty Name="CONTROL_ID" ColumnName="CONTROL_ID" />
                 <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
                 <ScalarProperty Name="GAME_ID" ColumnName="GAME_ID" />
+                <ScalarProperty Name="IsDownload" ColumnName="IsDownload" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

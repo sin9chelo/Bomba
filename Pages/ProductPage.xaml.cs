@@ -1,4 +1,5 @@
-﻿using Main.ViewModel;
+﻿using Main.Repositories;
+using Main.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,10 +31,18 @@ namespace Main.Pages
 
         private void PurchaseGame_Click(object sender, RoutedEventArgs e)
         {
-            foreach (Window window in Application.Current.Windows)
+            using(UnitOfWork context = new UnitOfWork())
             {
-                if (window.GetType() == typeof(MainWindow))
-                    (window as MainWindow).ActiveFrame.Navigate(new Uri("../Pages/PurchasePage.xaml", UriKind.RelativeOrAbsolute));
+                if (!context.UserGameRepository.IsPurchase(CurrentGameName.Text))
+                {
+                    foreach (Window window in Application.Current.Windows)
+                    {
+                        if (window.GetType() == typeof(MainWindow))
+                            (window as MainWindow).ActiveFrame.Navigate(new Uri("../Pages/PurchasePage.xaml", UriKind.RelativeOrAbsolute));
+                    }
+                }
+                else
+                    App.FailedLoad();
             }
         }
     }

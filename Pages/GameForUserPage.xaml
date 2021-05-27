@@ -1,11 +1,11 @@
-﻿<Page x:Class="Main.Pages.ProductPage"
+﻿<Page x:Class="Main.Pages.GameForUserPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Main.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="524" d:DesignWidth="1000" MinHeight="1000" MinWidth="1000" MaxHeight="4000" MaxWidth="1650"
+       d:DesignHeight="524" d:DesignWidth="1000" MinHeight="1000" MinWidth="1000" MaxHeight="4000" MaxWidth="1650"
       Title="ProductPage">
     <Page.Resources>
         <ResourceDictionary>
@@ -25,12 +25,25 @@
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="0.63*"/>
+                <ColumnDefinition Width="0.83*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="28" Name="CurrentGameName" Opacity="0.6" Foreground="White"/>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="28" Name="CurrentGame" Opacity="0.6" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <Border Grid.Column="1" Name="SignBorder" Style="{StaticResource BorderBtn}">
-                <Button Name="BuyBtn" Content="Purchase" Style="{StaticResource BtnSave}" Click="PurchaseGame_Click"/>
+                <Button Name="DownloadBtn" Content="Download game" Style="{StaticResource BtnSave}" Click="DownloadGame_Click"/>
             </Border>
+            <TextBlock Name="DownloadText" Grid.Row="1" Visibility="Hidden" Grid.Column="0" Foreground="#6AD1FE" Text="Downloading progress: " FontSize="26" Opacity="0.6"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.6*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Name="ProgressLabel" Foreground="#6AD1FE" FontSize="14"/>
+                <ProgressBar Name="DownloadingBar" Height="20" Visibility="Hidden"  Grid.Row="1"/>
+            </Grid>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

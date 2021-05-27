@@ -33,6 +33,7 @@ namespace Main.Data.repositories
             bool flag = false;
             
             var users = AppContext.USER.ToList();
+
             foreach (USER u in users)
             {
                 if (username == u.USERNAME && App.GetHash(password) == u.PASSWORD_HASH)
@@ -82,9 +83,7 @@ namespace Main.Data.repositories
                 return flag;
             }
             else
-            {
                 return false;
-            }
         }
 
         public bool FindDuplicate(string username)

@@ -32,10 +32,7 @@
             </Border>
         </Grid>
         <Grid Grid.Row="2">
-            <StackPanel Margin="25 0 0 0" Orientation="Horizontal">
-                <CheckBox VerticalAlignment="Center" ></CheckBox>
-                <TextBlock Text="stay signed in" Margin="15 0 0 5" VerticalAlignment="Center" FontSize="18" Foreground="White"></TextBlock>
-            </StackPanel>
+       
         </Grid>
         <Grid Grid.Row="3">
             <Border Name="SignBorder" Style="{StaticResource BorderBtn}">

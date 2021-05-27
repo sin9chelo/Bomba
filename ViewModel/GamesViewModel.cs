@@ -24,16 +24,23 @@ namespace Main.ViewModel
         public GamesViewModel()
         {
             games = new ObservableCollection<GAME>();
-            using (ApplicationDBEntities context = new ApplicationDBEntities())
+            using (UnitOfWork context = new UnitOfWork())
             {
-                foreach(var game in context.GAME)
+                foreach (var game in context.GameRepository.AppContext.GAME)
                 {
                     games.Add(game);
                 }
             }
             GameInfoCommand = new RelayCommand(ExecuteGameInfo);
         }
-
+        public void ActionCollection()
+        {
+            Games = new ObservableCollection<GAME>(Games.Where(t => t.TYPE.Contains("Action")));
+        }
+        public void StrategyCollection()
+        { 
+            Games = new ObservableCollection<GAME>(Games.Where(t => t.TYPE.Contains("Strategy")));
+        }
         public void SortByPrice()
         {
             Games = new ObservableCollection<GAME>(Games.OrderBy(t => t.PRICE));
@@ -44,13 +51,21 @@ namespace Main.ViewModel
         }
         public void GetGameBySearchRequest(string path)
         {
-            try
+            if(path == "")
             {
-                Games = new ObservableCollection<GAME>(Games.Where(t => t.NAME.Contains(path)));
+                GamesViewModel model = new GamesViewModel();
+                Games = model.Games;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    Games = new ObservableCollection<GAME>(Games.Where(t => t.NAME.Contains(path)));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
         public ObservableCollection<GAME> Games

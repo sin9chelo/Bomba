@@ -23,11 +23,12 @@ namespace Main.DB
         {
             this.USER_ID = userId;
             this.GAME_ID = gameId;
+            this.IsDownload = 0;
         }
-
         public int CONTROL_ID { get; set; }
         public Nullable<int> USER_ID { get; set; }
         public Nullable<int> GAME_ID { get; set; }
+        public Nullable<int> IsDownload { get; set; }
     
         public virtual GAME GAME { get; set; }
         public virtual USER USER { get; set; }

@@ -61,7 +61,16 @@ namespace Main.Pages
         {
             games.GetGameBySearchRequest(SearchString.Text);
         }
-        
+
+        private void ActionCollection_Click(object sender, RoutedEventArgs e)
+        {
+            games.ActionCollection();
+        }
+
+        private void StrategyCollection_Click(object sender, RoutedEventArgs e)
+        {
+            games.StrategyCollection();
+        }
     }
 
 }

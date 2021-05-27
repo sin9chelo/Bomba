@@ -11,5 +11,7 @@ namespace Main.Data.interfaces
     public interface IUserGameRepository : IRepository<USER_GAME>
     {
         void AddUserGame(USER_GAME curGame);
+        bool IsPurchase(string name);
+        void SetDownload(string name);
     }
 }

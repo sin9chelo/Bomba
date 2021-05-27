@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Border Name="SignBorderLogin" Style="{StaticResource BorderStyle}">
-                <TextBox Name="SignBoxLogin" Text="{Binding Username, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" Tag="Username" Style="{StaticResource SignBox}">
+                <TextBox Name="SignBoxLogin" Text="{Binding Username, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{StaticResource errorTemplate}" Tag="Username" Style="{StaticResource SignBox}" PreviewTextInput="SignBoxLogin_PreviewTextInput">
                     
                 </TextBox>
             </Border>

@@ -40,9 +40,9 @@
                     <Image Width="140" Height="140" Name="ImgSlot" Source="{svgc:SvgImage Source=/image/user.svg}">
                         
                     </Image>
-                    <Button Content="Upload Image" Style="{StaticResource UploadBtn}" Click="UploadImage_Click">
+                    <!--<Button Content="Upload Image" Style="{StaticResource UploadBtn}" Click="UploadImage_Click">
 
-                    </Button>
+                    </Button>-->
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="2">

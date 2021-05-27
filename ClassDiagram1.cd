@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Main.App">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAIgAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.MainWindow">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAACACAAAAAAAAAAAAAAACAAAAAgAAABQAQAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Commands.RelayCommand">
+    <Position X="4.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.ViewModel.GamesViewModel">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAABAAAAAQAgkCAAKQAAAAQAgAgAAAACAQAYAEAAAIA=</HashCode>
+      <FileName>ViewModel\GamesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.ViewModel.UserGamesViewModel">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAAAAQAgkCAAKAAAAAQAgAgAAAACAQAAAEAAAIA=</HashCode>
+      <FileName>ViewModel\UserGamesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Data.Account.Account">
+    <Position X="2.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Data\Account\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Data.repositories.GameRepository">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\repositories\GameRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Data.repositories.UserGameRepository">
+    <Position X="13.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\repositories\UserGameRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Data.repositories.UserRepository">
+    <Position X="15.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAgAAAAIAAAAQAICAAAEAAgAAAAAAAAgA=</HashCode>
+      <FileName>Data\repositories\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Data.repositories.@base.Repository&lt;T&gt;">
+    <Position X="13.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABABAAAAABAAAAAAIAAAAAgAAAIAEAAA=</HashCode>
+      <FileName>Data\repositories\base\Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Data.Static_Resources.CurrentGame">
+    <Position X="6" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Static Resources\CurrentGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Data.Static_Resources.CurrentUser">
+    <Position X="7.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Static Resources\CurrentUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.DB.GAME">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAACAAAAABBAAAAAiAAAAAAQAAAABACAAAAAAAAkA=</HashCode>
+      <FileName>DB\GAME.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.DB.USER">
+    <Position X="11.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAACGAAAAAIAAAIAAAAQAAAAQAAAA=</HashCode>
+      <FileName>DB\USER.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.DB.USER_GAME">
+    <Position X="13" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAABAAAACAAAAAAAAAgAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>DB\USER_GAME.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Other.DepositWindow">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAQAQAAA=</HashCode>
+      <FileName>Other\DepositWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Other.DoubleWindow">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Other\DoubleWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Other.FailedWindow">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Other\FailedWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Other.SuccesfullyWindow">
+    <Position X="17" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Other\SuccesfullyWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.GameForUserPage">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Pages\GameForUserPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.LibraryPage">
+    <Position X="18.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\LibraryPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.ProductPage">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\ProductPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.ProfilePage">
+    <Position X="20.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAQAAAAAAAQAAQAA=</HashCode>
+      <FileName>Pages\ProfilePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.PurchasePage">
+    <Position X="18.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Pages\PurchasePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.SignInPage">
+    <Position X="20.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Pages\SignInPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.SignUpPage">
+    <Position X="17" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\SignUpPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Pages.StorePage">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAEACAAA=</HashCode>
+      <FileName>Pages\StorePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Repositories.UnitOfWork">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAACAAgEAAAIAAABAAAAAAAAAAAAABAIAAAQA=</HashCode>
+      <FileName>Data\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.StartWindows.Authorization">
+    <Position X="17" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAACAAAAAAAAAAAAAAAAAAgEAAAAAAAAA=</HashCode>
+      <FileName>StartWindows\Authorization.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.StartWindows.Loading">
+    <Position X="18.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StartWindows\Loading.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Validation.ObservableObject">
+    <Position X="2.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation\ObservableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Validation.Validation_ByAnnotas">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBQAAAAAAAAAAAAAAQAAAAAAAAEAAAACAAIgAQAAAAA=</HashCode>
+      <FileName>Validation\Validation_ByAnnotas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Main.Data.interfaces.IGameRepository">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\interfaces\IGameRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Main.Data.interfaces.IUserGameRepository">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\interfaces\IUserGameRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Main.Data.interfaces.IUserRepository">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAgAAAAIAAAAAAICAAAEAAgAAAAAAAAgA=</HashCode>
+      <FileName>Data\interfaces\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Main.Data.interfaces.@base.IRepository&lt;T&gt;">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAABAAAAABAAAAAAIAAAAAgAAAIAEAAA=</HashCode>
+      <FileName>Data\interfaces\base\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

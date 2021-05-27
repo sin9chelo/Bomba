@@ -38,21 +38,15 @@ namespace Main.Pages
 
         private void UploadImage_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog file = new OpenFileDialog();
-            file.DefaultExt = ".png";
-            file.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+            //OpenFileDialog file = new OpenFileDialog();
+            //file.DefaultExt = ".png";
+            //file.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
 
-            if (file.ShowDialog() == true)
-            {
-                Uri fileUri = new Uri(file.FileName);
-                ImgSlot.Source = new BitmapImage(fileUri);
-            }
-
-
-            using (WebClient wc = new WebClient())
-            {
-                
-            }
+            //if (file.ShowDialog() == true)
+            //{
+            //    Uri fileUri = new Uri(file.FileName);
+            //    ImgSlot.Source = new BitmapImage(fileUri);
+            //}
         }
 
         private void SaveChanges_Click(object sender, RoutedEventArgs e)

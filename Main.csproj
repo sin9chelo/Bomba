@@ -146,6 +146,9 @@
     <Compile Include="Other\SuccesfullyWindow.xaml.cs">
       <DependentUpon>SuccesfullyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GameForUserPage.xaml.cs">
+      <DependentUpon>GameForUserPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LibraryPage.xaml.cs">
       <DependentUpon>LibraryPage.xaml</DependentUpon>
     </Compile>
@@ -191,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Other\SuccesfullyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GameForUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -277,6 +284,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <EntityDeploy Include="DB\GameNetModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GameNetModel.Designer.cs</LastGenOutput>
